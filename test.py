@@ -102,3 +102,7 @@ def get_the_page():
 
 zip_codes = extract_zip_codes("cities.csv")
 get_the_zip(zip_codes)
+
+
+# https://immovlan.be/en/real-estate?transactiontypes=for-sale,in-public-sale&propertytypes=apartment,investment-property,house,student-housing&propertysubtypes=apartment,studio,penthouse,duplex,ground-floor,loft,investment-property,residence,master-house,mixed-building,student-flat&towns=2000-antwerp&noindex=1
+# https://immovlan.be/en/real-estate?transactiontypes=for-sale,in-public-sale&propertytypes=apartment,investment-property,house,student-housing&propertysubtypes=apartment,studio,penthouse,duplex,ground-floor,loft,investment-property,residence,master-house,mixed-building,student-flat&towns=2000-antwerp&page=7&noindex=1
