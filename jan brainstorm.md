@@ -112,3 +112,7 @@ type of sale : exclusion of life sales. When doing a search, there is a filter f
 
 Data fields:
 number of bedrooms: it's in the data fields, all of them seem annoying to retrieve.
+
+url: https://immovlan.be/en/real-estate?transactiontypes=for-sale&propertytypes=house,apartment,student-housing,investment-property&propertysubtypes=residence,villa,bungalow,chalet,cottage,master-house,mansion,mixed-building,apartment,ground-floor,penthouse,duplex,triplex,studio,loft,student-flat,investment-property&isnewconstruction=yes&islifeannuity=no&noindex=1
+
+url: https://immovlan.be/en/real-estate?transactiontypes=for-sale&propertytypes=house,apartment,student-housing,investment-property&propertysubtypes=residence,villa,bungalow,chalet,cottage,master-house,mansion,mixed-building,apartment,ground-floor,penthouse,duplex,triplex,studio,loft,student-flat,investment-property&isnewconstruction=yes&islifeannuity=no&page=2&noindex=1
