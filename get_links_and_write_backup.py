@@ -24,7 +24,7 @@ def write_links_to_file(links_as_dict):
 def create_base_file(name):
     with open(f"{name}.csv", "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["reverse_or_not", "page_number", "url"])
+        writer.writerow(["page_number", "url"])
 
 # This is from edo and me
 def get_the_page():
@@ -114,13 +114,13 @@ def get_links_and_write_to_file_with_reverse(province):
     with requests.Session() as s:
         headers = {"User-Agent": "Chrome", "Connection": "keep-alive"}
         # trying with province as placeholder
-        ## This time brabant flamand
-        full_url = "https://immovlan.be/en/real-estate?transactiontypes=for-sale&propertytypes=house,apartment&propertysubtypes=residence,villa,mixed-building,master-house,cottage,bungalow,chalet,mansion,apartment,penthouse,ground-floor,duplex,studio,loft,triplex&provinces=limburg&isnewconstruction=yes&islifeannuity=no&sortdirection=ascending&sortby=zipcode&noindex=1"
-        base_url = "https://immovlan.be/en/real-estate?transactiontypes=for-sale&propertytypes=house,apartment&propertysubtypes=residence,chalet,bungalow,villa,apartment,duplex,loft,penthouse&provinces=vlaams-brabant&islifeannuity=no&page="
+        ## This time namur
+        full_url = "https://immovlan.be/en/real-estate?transactiontypes=for-sale&propertytypes=house,apartment&propertysubtypes=residence,mixed-building,villa,cottage,bungalow,master-house,chalet,mansion,apartment,penthouse,ground-floor,duplex,loft,studio,triplex&provinces=namur&isnewconstruction=yes&islifeannuity=no&page=2&sortdirection=ascending&sortby=zipcode&noindex=1"
+        base_url = "https://immovlan.be/en/real-estate?transactiontypes=for-sale&propertytypes=house,apartment&propertysubtypes=residence,mixed-building,villa,cottage,bungalow,master-house,chalet,mansion,apartment,penthouse,ground-floor,duplex,loft,studio,triplex&provinces=namur&isnewconstruction=yes&islifeannuity=no&page="
         
         ascending_end_url = "&sortdirection=ascending&sortby=zipcode&noindex=1"
         descending_end_url = "&sortdirection=descending&sortby=zipcode&noindex=1"
-        file_name = f"{province}_all_links.csv"
+        file_name = f"{province}_all_links"
         create_base_file(file_name)
         
         ## !! Don't forget to update the range of the second loop
@@ -134,9 +134,9 @@ def get_links_and_write_to_file_with_reverse(province):
             all_pages_dict[i] = get_pages_to_scrape(url)
             append_links_to_file(file_name, all_pages_dict)
         
-        ## update the range here
+        ## update the range here : One more than the target.
         ## Grabbing the rest, in descending order
-        for i in range(1, 41):
+        for i in range(1, 34):
             all_pages_dict = {}
             url = base_url+f"{i}"+descending_end_url
             #list_of_pages.append(url)
@@ -195,4 +195,4 @@ def write_list_to_csv(rows, file_path, header=None):
 
 #write_list_to_csv(list_of_pages, "listofluxresultspages.csv")
 
-get_links_and_write_to_file_with_reverse("brabant_flamand")
+get_links_and_write_to_file_with_reverse("namur")
