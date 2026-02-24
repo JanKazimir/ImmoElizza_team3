@@ -134,6 +134,8 @@ def get_links_and_write_to_file_with_reverse(province):
             all_pages_dict[i] = get_pages_to_scrape(url)
             append_links_to_file(file_name, all_pages_dict)
         
+        
+        
         ## update the range here : One more than the target.
         ## Grabbing the rest, in descending order
         for i in range(1, 34):
