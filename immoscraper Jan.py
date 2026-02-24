@@ -34,6 +34,8 @@ def define_url():
 ## go into the filter setting, to remove the life annuity sales.
 ## run it on the second page, change the url using the hack, keep going.
 ## we'll need to add a sleep timer function, and multithreading.
+### look into asyncio and aiohttp library. to make lots of requests in parrallel
+
 def get_pages_to_scrape():
         with requests.Session() as s:
             headers = {"User-Agent": "Chrome", "Connection": "keep-alive"}
@@ -44,6 +46,7 @@ def get_pages_to_scrape():
             soup = BeautifulSoup(r.text, "html.parser")
             links = []
             
+            # get all the links from a single page result
             for card in soup.find_all("div", class_="long-and-truncated"):
                 text = card.get_text(" ", strip=True)
                 if text.startswith("Project: "): # if it's a project, skip it
@@ -53,18 +56,24 @@ def get_pages_to_scrape():
                     links.append(link["href"])
         
             print(links)            
-        
+
+
+## Not sure about this: 
+### we should also write a url id, in case we need it for the loops       
 def write_links_to_file(data):
-    with open("links.csv", "w", newline="") as f:
-        fieldnames=["url"]
+    with open("links.csv", "w", newline="", encoding="utf-8") as f:
+        fieldnames= ["id", "url"]
         
-        writer = csv.writer(data, fieldnames=fieldnames)
-        f = writer.writeheader
-        f = writer.writerows
-        
+        writer = csv.writer(f, fieldnames=fieldnames)
+        writer.writeheader
+        writer.writerows(data)
         
         
  
+just_in_case_links = ['https://immovlan.be/en/detail/apartment/for-sale/1000/brussels/vbd86951', 'https://immovlan.be/en/detail/villa/for-sale/1000/brussels/rbv09716', 'https://immovlan.be/en/detail/apartment/for-sale/1000/brussels/vbd90215', 'https://immovlan.be/en/detail/studio/for-sale/1000/brussels/vbd90167', 'https://immovlan.be/en/detail/ground-floor/for-sale/1000/brussels/vbd90166', 'https://immovlan.be/en/detail/loft/for-sale/1000/brussels/vbd90160', 'https://immovlan.be/en/detail/apartment/for-sale/1000/brussels/vbd89713', 'https://immovlan.be/en/detail/apartment/for-sale/1000/brussels/rbv33376', 'https://immovlan.be/en/detail/apartment/for-sale/1000/brussels/vbd89582', 'https://immovlan.be/en/detail/penthouse/for-sale/1000/brussels/vbd89485', 'https://immovlan.be/en/detail/master-house/for-sale/1000/brussels/vbd89465', 'https://immovlan.be/en/detail/studio/for-sale/1000/brussels/vbd89451', 'https://immovlan.be/en/detail/apartment/for-sale/1000/brussels/vbd89450']
+ 
         
-get_pages_to_scrape()
+#get_pages_to_scrape()
+write_links_to_file(just_in_case_links)
+
     
