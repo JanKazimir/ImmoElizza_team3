@@ -40,7 +40,6 @@ def get_pages_to_scrape():
         with requests.Session() as s:
             headers = {"User-Agent": "Chrome", "Connection": "keep-alive"}
             url = "https://immovlan.be/en/real-estate?transactiontypes=for-sale&propertytypes=house,apartment&propertysubtypes=residence,chalet,bungalow,villa,apartment,duplex,loft,penthouse&islifeannuity=no&page=5&noindex=1"
-            hack_url = "https://immovlan.be/en/real-estate?transactiontypes=for-sale,in-public-sale&propertytypes=house,apartment&propertysubtypes=residence,villa,mixed-building,master-house,cottage,bungalow,chalet,mansion,apartment,penthouse,ground-floor,duplex,studio,loft,triplex&page=4&sortdirection=ascending&sortby=zipcode&noindex=1"
             r = s.get(url, headers=headers, timeout=10 )
             print(url, r.status_code)
             soup = BeautifulSoup(r.text, "html.parser")
@@ -55,7 +54,8 @@ def get_pages_to_scrape():
                 if link:
                     links.append(link["href"])
         
-            print(links)            
+            print(links)
+            return links            
 
 
         
