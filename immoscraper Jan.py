@@ -58,5 +58,10 @@ def get_pages_to_scrape():
             return links            
 
 
+def get_pages_to_scrape_by_price():
+    pass
+    
+
+
         
 #get_pages_to_scrape()

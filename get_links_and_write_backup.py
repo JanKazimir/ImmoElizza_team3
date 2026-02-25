@@ -20,7 +20,6 @@ def write_links_to_file(links_as_dict):
                 writer.writerow([page_number, url])
 
 
-
 def create_base_file(name):
     with open(f"{name}.csv", "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
@@ -90,6 +89,19 @@ def get_pages_to_scrape(url):
 #get_the_page()
 list_of_pages = []
 
+def url_builder(base_url):
+    pass
+    
+    
+
+## testing something with urls:
+# this is ranking by price, from lowest to highest
+#https://immovlan.be/en/real-estate?transactiontypes=for-sale&propertytypes=house&propertysubtypes=residence,villa,mixed-building,cottage,master-house,bungalow,chalet,mansion&provinces=hainaut&minprice=10000&isnewconstruction=yes&islifeannuity=no&sortdirection=descending&sortby=price
+
+
+
+
+
 
 ## This function works for getting all the links for luxembourg.
 # i need to modify it to get all the links from the reverse order, so i can run it on the rest of the provinces.
@@ -114,7 +126,9 @@ def get_links_and_write_to_file_with_reverse(province):
     with requests.Session() as s:
         headers = {"User-Agent": "Chrome", "Connection": "keep-alive"}
         # trying with province as placeholder
-        ## This time namur
+        ## This time antwerp flats
+        flat_url_base = ""
+        house_url_base = ""
         full_url = "https://immovlan.be/en/real-estate?transactiontypes=for-sale&propertytypes=house,apartment&propertysubtypes=residence,mixed-building,villa,cottage,bungalow,master-house,chalet,mansion,apartment,penthouse,ground-floor,duplex,loft,studio,triplex&provinces=namur&isnewconstruction=yes&islifeannuity=no&page=2&sortdirection=ascending&sortby=zipcode&noindex=1"
         base_url = "https://immovlan.be/en/real-estate?transactiontypes=for-sale&propertytypes=house,apartment&propertysubtypes=residence,mixed-building,villa,cottage,bungalow,master-house,chalet,mansion,apartment,penthouse,ground-floor,duplex,loft,studio,triplex&provinces=namur&isnewconstruction=yes&islifeannuity=no&page="
         
