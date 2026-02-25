@@ -60,22 +60,34 @@ All fields we need:
 property_data = {
     "page_id": int,   ✅                  # index, set as default for now
     "page_url": str,   ✅                 # done
-    "locality": str,
+    "locality": str, ❗
     "zip_code":        ✅                 
     "property_type": str,   ✅            # houses, appartment, investment property
     "property_subtype": str,  ✅        
-    "price": float | int | None,  ✅      # <span class="detail__header_price_data"> <small></small> 235 000 €<small></small> </span>
-    "number_of_rooms": int | None,
+    "price": float | int | None,  ✅      #
+    "number_of_rooms": int | None, ✅
     "living_area_m2": float | int | None, ✅
-    "kitchen_fully_equipped": bool | None,
-    "furnished": bool | None,
+    "kitchen_fully_equipped": bool | None, ❗
+    "furnished": bool | None, ✅
     "open_fire": bool | None,
-    "has_terrace": bool | None,
-    "terrace_area_m2": float | int | None,   
-    "has_garden": bool | None,
-    "garden_area_m2": float | int | None,   
-    "land_area_m2": float | int | None,      
-    "number_of_facades": int | None,
+    "has_terrace": bool | None, ✅
+    "terrace_area_m2": float | int | None,   ✅
+    "has_garden": bool | None, ✅
+    "garden_area_m2": float | int | None,   ✅
+    "land_area_m2": float | int | None,    ✅  
+    "number_of_facades": int | None, ✅
     "has_swimming_pool": bool | None,
-    "building_condition": str
+    "building_condition": str , ✅
+    "build_year": int ✅
 }
+
+
+## problems:
+can't use xpaths, they'll change between pages. I need to regex this shit
+
+            
+            # Number of Bedrooms:
+            property_data["number_of_rooms"] = tree.xpath("//*[@id='main_content']/div[8]/div/div[2]/div/div[1]/p")[0].text_content()
+            property_data["building_condition"] = tree.xpath("//*[@id='main_content']/div[8]/div/div[1]/div/div[1]/p")[0].text_content()
+
+            
