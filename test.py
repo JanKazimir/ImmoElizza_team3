@@ -3,6 +3,7 @@ import requests
 import time
 import json
 import csv
+from bs4 import BeautifulSoup
 
 
 def extract_zip_codes(file_path):
@@ -131,10 +132,72 @@ def get_the_page():
         return pages_dict
 
 
-get_the_urls("slugs_list.json", "urls_dict.json")
+def has_results(html_content):
+    """
+    Controlla se nella pagina non è vuota --> sono presenti annunci immobiliari cercandoli per tag.
+    """
+    soup = BeautifulSoup(html_content, "html.parser")
 
+    # Cerchiamo tutti i tag <article>
+    # Se vuoi essere più preciso, aggiungi la classe: soup.find_all('article', class_='nome-classe')
+    listings = soup.find_all("article")
+
+    # Se la lista non è vuota, abbiamo trovato degli immobili
+    if len(listings) > 0:
+        return True
+    return False
+
+
+def get_the_pages(url):
+    with requests.Session() as s:
+        headers = {"User-Agent": "Chrome", "Connection": "keep-alive"}
+        lista = []
+        pattern = r"(&noindex=1)"
+        n = 0
+        match = re.search(r"towns=([^&]+)", url)
+        if match:
+            slug = match.group(1)
+        while True:
+            n += 1
+            base_url = re.sub(pattern, f"&page={n}\\1", url)
+            try:
+                r = s.get(base_url, headers=headers, timeout=10)
+
+                if r.status_code == 200 and has_results(r.text):
+                    lista.append({"zip": slug, "page": n, "url": base_url})
+                    time.sleep(0.2)
+                else:
+                    # Se la pagina è vuota o il server dà errore, usciamo dal ciclo per questo ZIP
+                    print(f"Fine pagine per {slug}. Totale: {n-1}")
+                    break
+
+            except Exception as e:
+                print("Errore: {}".format(e))
+
+    print("lista creata con successo: {}".format(lista))
+    return lista
+
+
+with open("urls_dict.json", "r", encoding="utf-8") as f:
+    data = json.load(f)
+
+lista_completa = []
+
+for zip, url in data.items():
+    print("elaborazione zip {}".format(zip))
+    lista = get_the_pages(url)
+    lista_completa.extend(lista)
+    if len(lista_completa) % 20 == 0:
+        with open("emergency_backup.json", "w", encoding="utf-8") as f:
+            json.dump(lista_completa, f, indent=4)
+
+with open("pages.json", "w", encoding="utf-8") as f:
+    json.dump(lista_completa, f, indent=4)
+
+print(f"Operazione conclusa! Totale URL pronti per lo scraping: {len(lista_completa)}")
+
+# get_the_urls("slugs_list.json", "urls_dict.json")
 # zip_codes = extract_zip_codes("cities.csv")
 # get_the_zip(zip_codes)
-
 # https://immovlan.be/en/real-estate?transactiontypes=for-sale,in-public-sale&propertytypes=apartment,investment-property,house,student-housing&propertysubtypes=apartment,studio,penthouse,duplex,ground-floor,loft,investment-property,residence,master-house,mixed-building,student-flat&towns=2000-antwerp&noindex=1
 # https://immovlan.be/en/real-estate?transactiontypes=for-sale,in-public-sale&propertytypes=apartment,investment-property,house,student-housing&propertysubtypes=apartment,studio,penthouse,duplex,ground-floor,loft,investment-property,residence,master-house,mixed-building,student-flat&towns=2000-antwerp&page=7&noindex=1
