@@ -22,7 +22,8 @@ def extract_zip_codes(file_path):
 
 
 def get_the_zip(zlista):
-    # test_zip = "2000"
+    # in: lista zip codes
+    # out: lista slug
     slug_list = []
     to_do_list = []
     for zip in zlista:
@@ -78,10 +79,40 @@ def get_the_zip(zlista):
     print("File salvato con successo!, {} slug unici salvati".format(len(slug_list)))
 
 
+def get_the_urls(json_input, json_output):
+    # in: lista degli slug
+    # out: dizionario zip - url
+    with open(json_input, "r", encoding="utf-8") as f:
+        slugs = json.load(f)
+
+    url = "https://immovlan.be/en/real-estate?transactiontypes=for-sale,in-public-sale&propertytypes=house,apartment,student-housing,investment-property&propertysubtypes=residence,villa,bungalow,chalet,cottage,master-house,mansion,mixed-building,apartment,ground-floor,penthouse,duplex,triplex,studio,loft,student-flat,investment-property&towns=1000-brussels&noindex=1"
+    # regex per sostituire lo slug
+    # nel ciclo for, salvo anche lo zip
+    pattern = r"(.*towns=)[^&]+(&.*)"
+    match = re.search(pattern, url)
+
+    if not match:
+        print("Errore: Impossibile trovare il parametro 'towns' nell'URL base.")
+        return None
+
+    prefix = match.group(1)
+    suffix = match.group(2)
+    urls_dict = {}
+
+    for slug in slugs:
+        urls_dict[slug] = "{}{}{}".format(prefix, slug, suffix)
+
+    with open(json_output, "w", encoding="utf-8") as file:
+        json.dump(urls_dict, file, indent=4)
+
+    print(f"Dizionario creato con successo! Generati {len(urls_dict)} URL.")
+    return urls_dict
+
+
 def get_the_page():
     with requests.Session() as s:
         headers = {"User-Agent": "Chrome", "Connection": "keep-alive"}
-        base_url = "https://immovlan.be/en/real-estate?transactiontypes=for-sale&propertytypes=house,apartment,student-housing,investment-property&propertysubtypes=residence,villa,bungalow,chalet,cottage,master-house,mansion,mixed-building,apartment,ground-floor,penthouse,duplex,triplex,studio,loft,student-flat,investment-property&isnewconstruction=yes&islifeannuity=no&noindex=1"
+        base_url = "https://immovlan.be/en/real-estate?transactiontypes=for-sale,in-public-sale&propertytypes=apartment,investment-property,house,student-housing&propertysubtypes=apartment,studio,penthouse,duplex,ground-floor,loft,investment-property,residence,master-house,mixed-building,student-flat&towns=2000-antwerp&noindex=1"
         n = 1
         pages_dict = {}
         pages_dict["page 1"] = base_url
@@ -100,9 +131,10 @@ def get_the_page():
         return pages_dict
 
 
-zip_codes = extract_zip_codes("cities.csv")
-get_the_zip(zip_codes)
+get_the_urls("slugs_list.json", "urls_dict.json")
 
+# zip_codes = extract_zip_codes("cities.csv")
+# get_the_zip(zip_codes)
 
 # https://immovlan.be/en/real-estate?transactiontypes=for-sale,in-public-sale&propertytypes=apartment,investment-property,house,student-housing&propertysubtypes=apartment,studio,penthouse,duplex,ground-floor,loft,investment-property,residence,master-house,mixed-building,student-flat&towns=2000-antwerp&noindex=1
 # https://immovlan.be/en/real-estate?transactiontypes=for-sale,in-public-sale&propertytypes=apartment,investment-property,house,student-housing&propertysubtypes=apartment,studio,penthouse,duplex,ground-floor,loft,investment-property,residence,master-house,mixed-building,student-flat&towns=2000-antwerp&page=7&noindex=1
