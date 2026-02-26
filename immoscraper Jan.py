@@ -2,7 +2,8 @@ import time
 import requests
 from bs4 import BeautifulSoup
 import csv
-
+import re
+import json
 
 
 
@@ -56,6 +57,11 @@ def get_pages_to_scrape():
         
             print(links)
             return links            
+
+
+def get_pages_to_scrape_by_price():
+    pass
+    
 
 
         
