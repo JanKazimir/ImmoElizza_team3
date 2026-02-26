@@ -25,14 +25,6 @@ def turn_a_jsonl_to_csv(input_file_path, output_file_path):
 
 
 
-     
-            
-            
-        
-        
-        
-
-
-turn_a_jsonl_to_csv("output files/200_links_output.jsonl", "output files/200_links_output.csv")
+turn_a_jsonl_to_csv("output files/all_property_data_jan_thursday_scrape.jsonl", "all_property_data_jan_thursday_scrape.csv")
 
     
