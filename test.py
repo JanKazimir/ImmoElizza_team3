@@ -201,54 +201,70 @@ print(f"Operazione conclusa! Totale URL pronti per lo scraping: {len(lista_compl
 
 
 def get_final_list(url):
-    with requests.Session() as s:
-        headers = {"User-Agent": "Chrome", "Connection": "keep-alive"}
-        r = s.get(url, headers=headers, timeout=10)
-        soup = BeautifulSoup(r.text, "html.parser")
-        articles = soup.find_all("article")
-        dic = {}
-        n = 0
+    dic = {}
+    try:
+        with requests.Session() as s:
+            headers = {"User-Agent": "Chrome", "Connection": "keep-alive"}
+            r = s.get(url, headers=headers, timeout=10)
 
-        for article in articles:
-            a_tag = article.find("a", href=True)
-            if a_tag:
-                link = a_tag["href"]
-                # Assicurati che il link sia completo (aggiungi il dominio se relativo)
-                if link.startswith("/"):
-                    link = "https://immovlan.be" + link
-                    # salva solo se esiste davvero
-                n += 1
-                dic[n] = link
+            if r.status_code != 200:
+                return {}
 
-        print(dic)
+            soup = BeautifulSoup(r.text, "html.parser")
+            articles = soup.find_all("article")
+            n = 0
+
+            for article in articles:
+                a_tag = article.find("a", href=True)
+                if a_tag:
+                    link = a_tag["href"]
+                    # Assicurati che il link sia completo (aggiungi il dominio se relativo)
+                    if link.startswith("/"):
+                        link = "https://immovlan.be" + link
+                        # salva solo se esiste davvero
+                    n += 1
+                    dic[n] = link
+    except Exception as e:
+        print("errore durante il get: {}".format(e))
+        return {}
+
+    # print(dic)
+    return dic
 
 
 with open("pages.json", "r", encoding="utf-8") as f:
     pages_list = json.load(f)
 
 final_list = []
-n = 0
-for page in pages_list:
-    print("elaborazione  #{}, zip {}".format(n + 1, page["zip"]))
+count = 0
+page_count = 0
+for i, page in enumerate(pages_list):
+    page_count += 1
+    print(
+        " {} / {} ... Elaborazione  zip {}".format(i + 1, len(pages_list), page["zip"])
+    )
     link = get_final_list(page["url"])
-    if link is None:
-        print(f"⚠️ Errore: la pagina dello zip {page['zip']} non ha restituito dati.")
+
+    if not link:
         continue
-    for url_property in link:
-        n += 1
+
+    for url_property in link.values():
+        count += 1
         # Creiamo un oggetto pulito per ogni singola proprietà
-        proprieta = {"id": n, "zip": page["zip"], "url": url_property}
-
+        proprieta = {"id": count, "zip": page["zip"], "url": url_property}
         final_list.append(proprieta)
-    if len(final_list) % 500 == 0:
-        with open("emergency_backup.json", "w", encoding="utf-8") as f:
-            json.dump(final_list, f, indent=4)
-    time.sleep(0.1)
 
-print(f"Fatto! Totale proprietà salvate: {n}")
+    if page_count % 20 == 0:
+        with open("pr_emergency_backup.json", "w", encoding="utf-8") as f:
+            json.dump(final_list, f, indent=4)
+            print(f"--- Backup salvato a quota {count} immobili ---")
+
+    time.sleep(0.1)
 
 with open("links.json", "w", encoding="utf-8") as f:
     json.dump(final_list, f, indent=4)
+
+print(f"Fatto! Totale proprietà salvate: {count}")
 
 
 # get_final_list("https://immovlan.be/en/real-estate?transactiontypes=for-sale,in-public-sale&propertytypes=house,apartment,student-housing,investment-property&propertysubtypes=residence,villa,bungalow,chalet,cottage,master-house,mansion,mixed-building,apartment,ground-floor,penthouse,duplex,triplex,studio,loft,student-flat,investment-property&towns=3800-aalst&page=2&noindex=1")
