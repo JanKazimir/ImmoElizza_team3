@@ -8,34 +8,7 @@ import csv
 import json
 from lxml import html
 
-# This is the function that will scrape a page of all the usefull data. 
-# Return a dict, with an index number and url as key.
 
-## Target Dict:
-
-""" 
-property_data = {
-    "page_id": int,                     
-    "page_url": str,                    
-    "locality": str,                    
-    "property_type": str,               
-    "property_subtype": str,          
-    "price": float | int | None,        
-    "number_of_rooms": int | None,
-    "living_area_m2": float | int | None,
-    ""kitchen_equipment"": str | None,
-    "furnished": bool | None,
-    "has_terrace": bool | None,
-    "terrace_area_m2": float | int | None,   
-    "has_garden": bool | None,
-    "garden_area_m2": float | int | None,   
-    "land_area_m2": float | int | None,      
-    "number_of_facades": int | None,
-    "has_swimming_pool": bool | None,
-    "building_condition": str, 
-    "build_year": int
-}
- """
 
 def append_dict_jsonl(path, record :dict):
     with open(path, "a", encoding="utf-8") as f:
@@ -65,7 +38,7 @@ def scrape_a_page(url):
                 "property_type": None,
                 "property_subtype": None,
                 "price": None,
-                "number_of_rooms": None,
+                "number_of_bedrooms": None,
                 "livable_surface_m2": None,
                 "kitchen_equipment": None,
                 "furnished": None,
