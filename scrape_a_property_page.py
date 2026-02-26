@@ -31,8 +31,8 @@ def scrape_data_from_property_page(url, page_index, session, target_path="testin
     # target_path = 
 
     r = session.get(url, headers=headers, timeout=10 )
-    print(url, r.status_code)
-    print("Begin Scrape!")
+    #print(url, r.status_code)
+    #print("Begin Scrape!")
     soup = BeautifulSoup(r.text, "html.parser")
     
     
@@ -175,7 +175,7 @@ def scrape_data_from_property_page(url, page_index, session, target_path="testin
     
 
     #print(property_data)
-    print("Page scrapped!")
+    #print("Page scrapped!")
     append_dict_jsonl(property_data, target_path)
     return property_data
 

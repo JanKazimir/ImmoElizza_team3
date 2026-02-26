@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 import time
 import csv
 import json
+from datetime import datetime
+
 ## Importing files
 from scrape_a_property_page import scrape_data_from_property_page
 
@@ -26,33 +28,36 @@ def open_json_and_put_links_in_dict(source_file):
         links_as_dict = {}
         
         for item in data:
-            links_as_dict[item["id"]] = links_as_dict["id"]
-            links_as_dict[item['url']] = item['url']
-    print(links_as_dict)        
+            links_as_dict[item["id"]] = item['url']   
     return links_as_dict
         
 
 
-
-def scrape_all_property_pages(source_file="links_for_jan_test.json", target_path="testing_scrape_a_page.jsonl"):
+def scrape_all_property_pages(source_file, target_path):
     ## here we get the list
-    source_file = "links_for_jan_test.json"
+    print("starting at:")
+    print(datetime.now())
     list_of_links = ["https://immovlan.be/en/detail/apartment/for-sale/1050/elsene/vbd91331", "https://immovlan.be/en/detail/apartment/for-sale/5000/namur/vbd89112", "https://immovlan.be/en/detail/residence/for-sale/4000/liege/vbd90637"]
     
     links_as_dict = open_json_and_put_links_in_dict(source_file)
-    print(links_as_dict)
-    
-    for index, url in links_as_dict.items():
-        print(index, url)
+    #print(links_as_dict)
+    with requests.Session() as session:
+        for index, url in links_as_dict.items():
         
-        with requests.Session() as session:
             time.sleep(0.1)
-            print("waiting a bit...")
+            print(f"Scaricando pagina {index}...", end="\r")
             try:
                 scrape_data_from_property_page(url, index, session, target_path)
             except Exception as e:
                 print(f"Got an error:{e}  on index {index}, continuing...")
                 continue
+    print("finished at:")
+    print(datetime.now())        
+
+
+ 
+scrape_all_property_pages("200_links_for_testing.json","200_links_output.jsonl" ) 
+ 
         
 """ 
     # We scrape all the links from a list:
@@ -72,7 +77,7 @@ def scrape_all_property_pages(source_file="links_for_jan_test.json", target_path
     
 
 
-scrape_all_property_pages()
+
 
 ## testing quick: works
 #url = "https://immovlan.be/en/detail/residence/for-sale/2970/schilde/rbv23379"
