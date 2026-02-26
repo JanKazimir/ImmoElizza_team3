@@ -43,20 +43,21 @@ def scrape_all_property_pages(source_file, target_path):
     #print(links_as_dict)
     with requests.Session() as session:
         for index, url in links_as_dict.items():
-        
-            time.sleep(0.1)
+            if int(index) <= 29490:
+                continue
+            time.sleep(0.01)
             print(f"Scaricando pagina {index}...", end="\r")
             try:
                 scrape_data_from_property_page(url, index, session, target_path)
             except Exception as e:
                 print(f"Got an error:{e}  on index {index}, continuing...")
                 continue
-    print("finished at:")
-    print(datetime.now())        
+print("finished at:")
+print(datetime.now())        
 
 
 
-scrape_all_property_pages("all_links_thursday_two_twenty.json", "all_links_thursday_two_twenty_output.jsonl") 
+scrape_all_property_pages("Backup_scripts/all_links_thursday_two_twenty.json", "Backup_scripts/all_links_thursday_two_twenty_output.jsonl") 
  
         
 """ 
