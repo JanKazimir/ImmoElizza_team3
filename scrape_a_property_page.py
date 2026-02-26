@@ -26,11 +26,11 @@ def append_dict_jsonl(record :dict, target_path):
 ## ❗❗❗ This function needs pages in english. Otherwise I can change it, but it's complicated sorta breaks.
 
         
-def scrape_data_from_property_page(url, target_path="testing_scrape_a_page.jsonl", page_index=1):
+def scrape_data_from_property_page(url, page_index, session, target_path="testing_scrape_a_page.jsonl"):
     headers = {"User-Agent": "Chrome", "Connection": "keep-alive"}
     # target_path = 
 
-    r = requests.get(url, headers=headers, timeout=10 )
+    r = session.get(url, headers=headers, timeout=10 )
     print(url, r.status_code)
     print("Begin Scrape!")
     soup = BeautifulSoup(r.text, "html.parser")
@@ -183,5 +183,7 @@ def scrape_data_from_property_page(url, target_path="testing_scrape_a_page.jsonl
 ##
 ### Calling the functions for testing
 ##
-url = "https://immovlan.be/en/detail/ground-floor/for-sale/1050/elsene/vbd49955"        
-scrape_data_from_property_page(url)
+
+if __name__ == "__main__":
+    url = "https://immovlan.be/en/detail/ground-floor/for-sale/1050/elsene/vbd49955"        
+    scrape_data_from_property_page(url)
