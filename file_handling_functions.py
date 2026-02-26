@@ -12,8 +12,6 @@ def turn_a_jsonl_to_csv(input_file_path, output_file_path):
     with open(input_file_path, "r") as input_file:
         rows = [json.loads(line) for line in input_file if line.strip()]
     
-    # setting the fieldnames as the keys of the first row.    
-    #fieldnames = rows[0].keys()    
 
     with open(output_file_path, "w", newline="") as output_file:
         fieldnames = rows[0].keys()   
@@ -25,14 +23,6 @@ def turn_a_jsonl_to_csv(input_file_path, output_file_path):
 
 
 
-     
-            
-            
-        
-        
-        
-
-
-turn_a_jsonl_to_csv("output files/200_links_output.jsonl", "output files/200_links_output.csv")
+turn_a_jsonl_to_csv("output files/all_property_data_jan_thursday_scrape.jsonl", "all_property_data_jan_thursday_scrape.csv")
 
     
