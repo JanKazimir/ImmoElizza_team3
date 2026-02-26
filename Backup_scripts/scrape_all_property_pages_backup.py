@@ -8,7 +8,7 @@ import json
 from datetime import datetime
 
 ## Importing files
-from scrape_a_property_page_backup import scrape_data_from_property_page_backup
+from scrape_a_property_page_backup import scrape_data_from_property_page
 
 
 
@@ -56,7 +56,7 @@ def scrape_all_property_pages(source_file, target_path):
 
 
 
-scrape_all_property_pages("200_links_for_testing.json","200_links_output.jsonl" ) 
+scrape_all_property_pages("all_links_thursday_two_twenty.json", "all_links_thursday_two_twenty_output.jsonl") 
  
         
 """ 
