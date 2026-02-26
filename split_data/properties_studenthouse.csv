@@ -1,0 +1,94 @@
+page_id,page_url,locality,zip_code,property_type,property_subtype,price,number_of_bedrooms,livable_surface_m2,kitchen_equipment,furnished,has_terrace,terrace_area_m2,has_garden,garden_area_m2,land_area_m2,number_of_facades,has_swimming_pool,building_condition,build_year
+1277,https://immovlan.be/en/detail/student-flat/for-sale/1070/anderlecht/vbd86075,Anderlecht,1070.0,studentHouse,studentFlat,129000.0,1.0,25.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,New,2023.0
+1312,https://immovlan.be/en/detail/student-flat/for-sale/1070/anderlecht/rbu98127,Anderlecht,1070.0,studentHouse,studentFlat,125000.0,1.0,19.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,N/A
+2025,https://immovlan.be/en/detail/student-flat/for-sale/2000/antwerp/rbv25138,Antwerp,2000.0,studentHouse,studentFlat,187000.0,N/A,32.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Normal,2013.0
+2082,https://immovlan.be/en/detail/student-flat/for-sale/2000/antwerp/rbu86022,Antwerp,2000.0,studentHouse,studentFlat,135000.0,N/A,34.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2013.0
+2093,https://immovlan.be/en/detail/student-flat/for-sale/2000/antwerp/rbu55901,Antwerp,2000.0,studentHouse,studentFlat,130000.0,1.0,18.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2016.0
+2138,https://immovlan.be/en/detail/student-flat/for-sale/2018/antwerp/rbv27783,Antwerp,2018.0,studentHouse,studentFlat,120000.0,1.0,20.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+2140,https://immovlan.be/en/detail/student-flat/for-sale/2018/antwerp/rbv27333,Antwerp,2018.0,studentHouse,studentFlat,178000.0,1.0,55.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Normal,N/A
+2281,https://immovlan.be/en/detail/student-flat/for-sale/2060/antwerp/rbv34428,Antwerp,2060.0,studentHouse,studentFlat,129990.0,1.0,16.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Normal,2016.0
+2296,https://immovlan.be/en/detail/student-flat/for-sale/2060/antwerp/rbu86850,Antwerp,2060.0,studentHouse,studentFlat,145000.0,N/A,15.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Normal,2020.0
+2334,https://immovlan.be/en/detail/student-flat/for-sale/2060/antwerp/rbu86849,Antwerp,2060.0,studentHouse,studentFlat,145000.0,N/A,15.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Normal,2020.0
+3414,https://immovlan.be/en/detail/student-flat/for-sale/5580/han-sur-lesse/vbd66594,Han-sur-Lesse,5580.0,studentHouse,studentFlat,99000.0,1.0,34.0,N/A,N/A,1.0,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2020.0
+8855,https://immovlan.be/en/detail/student-flat/for-sale/8000/brugge/rbv17367,Brugge,8000.0,studentHouse,studentFlat,140000.0,N/A,18.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2015.0
+8862,https://immovlan.be/en/detail/student-flat/for-sale/8000/brugge/rbv31060,Brugge,8000.0,studentHouse,studentFlat,145000.0,N/A,21.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2015.0
+8876,https://immovlan.be/en/detail/student-flat/for-sale/8000/brugge/rbv18190,Brugge,8000.0,studentHouse,studentFlat,150000.0,N/A,28.0,N/A,N/A,1.0,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2016.0
+8879,https://immovlan.be/en/detail/student-flat/for-sale/8000/brugge/rbu94001,Brugge,8000.0,studentHouse,studentFlat,125000.0,N/A,16.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2016.0
+8885,https://immovlan.be/en/detail/student-flat/for-sale/8000/brugge/rbk24233,Brugge,8000.0,studentHouse,studentFlat,140000.0,N/A,24.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2015.0
+8886,https://immovlan.be/en/detail/student-flat/for-sale/8000/brugge/rbk30458,Brugge,8000.0,studentHouse,studentFlat,160000.0,N/A,25.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2016.0
+8887,https://immovlan.be/en/detail/student-flat/for-sale/8000/brugge/rbt00880,Brugge,8000.0,studentHouse,studentFlat,120000.0,N/A,16.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2016.0
+8888,https://immovlan.be/en/detail/student-flat/for-sale/8000/brugge/rbi50278,Brugge,8000.0,studentHouse,studentFlat,120000.0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2015.0
+8889,https://immovlan.be/en/detail/student-flat/for-sale/8000/brugge/rbi41391,Brugge,8000.0,studentHouse,studentFlat,165000.0,N/A,18.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2016.0
+8890,https://immovlan.be/en/detail/student-flat/for-sale/8000/brugge/rbh85098,Brugge,8000.0,studentHouse,studentFlat,137500.0,N/A,17.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2015.0
+8959,https://immovlan.be/en/detail/student-flat/for-sale/8000/brugge/rbs35778,Brugge,8000.0,studentHouse,studentFlat,115000.0,N/A,16.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2016.0
+8970,https://immovlan.be/en/detail/student-flat/for-sale/8000/brugge/rbt32507,Brugge,8000.0,studentHouse,studentFlat,165000.0,N/A,33.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2016.0
+8971,https://immovlan.be/en/detail/student-flat/for-sale/8000/brugge/rbk23335,Brugge,8000.0,studentHouse,studentFlat,125000.0,N/A,16.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2015.0
+9088,https://immovlan.be/en/detail/student-flat/for-sale/1000/brussels/vbd88554,Brussels,1000.0,studentHouse,studentFlat,135000.0,1.0,19.0,Super equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Normal,2017.0
+9310,https://immovlan.be/en/detail/student-flat/for-sale/1000/brussels/vbd60895,Brussels,1000.0,studentHouse,studentFlat,223500.0,0.0,24.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,New,2022.0
+9522,https://immovlan.be/en/detail/student-flat/for-sale/1000/brussels/vbd72980,Brussels,1000.0,studentHouse,studentFlat,223500.0,0.0,26.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,New,2022.0
+9532,https://immovlan.be/en/detail/student-flat/for-sale/1000/brussels/vbd70793,Brussels,1000.0,studentHouse,studentFlat,237500.0,0.0,31.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,New,2022.0
+10898,https://immovlan.be/en/detail/student-flat/for-sale/9160/lokeren/rbt69497,Lokeren,9160.0,studentHouse,studentFlat,174000.0,1.0,0.0,N/A,N/A,1.0,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2018.0
+12216,https://immovlan.be/en/detail/student-flat/for-sale/2650/edegem/vwd09454,Edegem,2650.0,studentHouse,studentFlat,149750.0,1.0,20.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,N/A
+12657,https://immovlan.be/en/detail/student-flat/for-sale/1050/elsene/vbd86451,Elsene,1050.0,studentHouse,studentFlat,125000.0,0.0,17.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Normal,2020.0
+12693,https://immovlan.be/en/detail/student-flat/for-sale/1050/elsene/rbv13090,Elsene,1050.0,studentHouse,studentFlat,199000.0,1.0,32.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Normal,N/A
+15334,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv35530,Gent,9000.0,studentHouse,studentFlat,205000.0,N/A,26.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15335,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv35529,Gent,9000.0,studentHouse,studentFlat,200000.0,N/A,26.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15336,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv35528,Gent,9000.0,studentHouse,studentFlat,200000.0,N/A,25.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15342,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv34968,Gent,9000.0,studentHouse,studentFlat,175000.0,1.0,20.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15357,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv31557,Gent,9000.0,studentHouse,studentFlat,180000.0,1.0,18.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15376,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv31425,Gent,9000.0,studentHouse,studentFlat,165000.0,N/A,22.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15377,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv31424,Gent,9000.0,studentHouse,studentFlat,220000.0,N/A,35.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15378,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv31423,Gent,9000.0,studentHouse,studentFlat,160000.0,1.0,17.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15387,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv27704,Gent,9000.0,studentHouse,studentFlat,170000.0,N/A,25.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15388,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv27703,Gent,9000.0,studentHouse,studentFlat,190000.0,N/A,31.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15392,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv26651,Gent,9000.0,studentHouse,studentFlat,205000.0,N/A,27.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15393,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv26464,Gent,9000.0,studentHouse,studentFlat,215000.0,N/A,31.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15394,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv26463,Gent,9000.0,studentHouse,studentFlat,155000.0,N/A,19.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15399,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv25758,Gent,9000.0,studentHouse,studentFlat,160000.0,N/A,20.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15420,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv24459,Gent,9000.0,studentHouse,studentFlat,200000.0,N/A,25.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15437,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv14901,Gent,9000.0,studentHouse,studentFlat,200000.0,1.0,25.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15438,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv14900,Gent,9000.0,studentHouse,studentFlat,205000.0,1.0,25.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15441,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv14273,Gent,9000.0,studentHouse,studentFlat,195000.0,N/A,27.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15442,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv14272,Gent,9000.0,studentHouse,studentFlat,200000.0,N/A,23.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15443,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbu42128,Gent,9000.0,studentHouse,studentFlat,149500.0,1.0,15.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,2025.0
+15444,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv14255,Gent,9000.0,studentHouse,studentFlat,205000.0,1.0,22.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15445,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv14254,Gent,9000.0,studentHouse,studentFlat,210000.0,1.0,23.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15448,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv13045,Gent,9000.0,studentHouse,studentFlat,175000.0,N/A,20.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15529,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbu42127,Gent,9000.0,studentHouse,studentFlat,189500.0,1.0,17.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,2025.0
+15565,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbt31387,Gent,9000.0,studentHouse,studentFlat,200000.0,N/A,21.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15566,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbt31386,Gent,9000.0,studentHouse,studentFlat,205000.0,N/A,25.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15567,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbt30622,Gent,9000.0,studentHouse,studentFlat,175000.0,N/A,18.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15568,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbt30621,Gent,9000.0,studentHouse,studentFlat,195000.0,N/A,25.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15570,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbt26111,Gent,9000.0,studentHouse,studentFlat,170000.0,N/A,23.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+15571,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbs99536,Gent,9000.0,studentHouse,studentFlat,228000.0,1.0,21.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,New,N/A
+15572,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbs99535,Gent,9000.0,studentHouse,studentFlat,210000.0,1.0,18.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,New,N/A
+15603,https://immovlan.be/en/detail/student-flat/for-sale/9000/gent/rbv11217,Gent,9000.0,studentHouse,studentFlat,200000.0,N/A,25.0,Fully equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1935.0
+16433,https://immovlan.be/en/detail/student-flat/for-sale/4000/liege/vbd44817,Liege,4000.0,studentHouse,studentFlat,135000.0,1.0,20.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,N/A
+16586,https://immovlan.be/en/detail/student-flat/for-sale/4000/liege/vbd72315,Liege,4000.0,studentHouse,studentFlat,165000.0,1.0,0.0,N/A,N/A,1.0,N/A,N/A,N/A,N/A,N/A,N/A,New,2024.0
+17707,https://immovlan.be/en/detail/student-flat/for-sale/7000/mons/vbd27427,Mons,7000.0,studentHouse,studentFlat,156000.0,1.0,15.0,Super equipped,N/A,1.0,N/A,N/A,N/A,N/A,N/A,N/A,New,2025.0
+18763,https://immovlan.be/en/detail/student-flat/for-sale/3001/heverlee/rbv25963,Heverlee,3001.0,studentHouse,studentFlat,165000.0,1.0,15.0,Super equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2014.0
+18784,https://immovlan.be/en/detail/student-flat/for-sale/3001/heverlee/rbv03442,Heverlee,3001.0,studentHouse,studentFlat,200000.0,1.0,23.0,N/A,N/A,1.0,N/A,N/A,N/A,N/A,N/A,N/A,Fully renovated,N/A
+18974,https://immovlan.be/en/detail/student-flat/for-sale/7301/hornu/vbd66263,Hornu,7301.0,studentHouse,studentFlat,35000.0,1.0,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Normal,N/A
+19396,https://immovlan.be/en/detail/student-flat/for-sale/1090/jette/rbu58367,Jette,1090.0,studentHouse,studentFlat,157000.0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,New,2025.0
+19397,https://immovlan.be/en/detail/student-flat/for-sale/1090/jette/rbu58366,Jette,1090.0,studentHouse,studentFlat,160000.0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,New,2025.0
+19398,https://immovlan.be/en/detail/student-flat/for-sale/1090/jette/rbu58365,Jette,1090.0,studentHouse,studentFlat,207000.0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,New,2025.0
+19399,https://immovlan.be/en/detail/student-flat/for-sale/1090/jette/rbu58364,Jette,1090.0,studentHouse,studentFlat,210000.0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,New,2025.0
+19400,https://immovlan.be/en/detail/student-flat/for-sale/1090/jette/rbu58363,Jette,1090.0,studentHouse,studentFlat,210500.0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,New,2025.0
+19487,https://immovlan.be/en/detail/student-flat/for-sale/1090/jette/vbd44785,Jette,1090.0,studentHouse,studentFlat,289000.0,3.0,97.0,Super equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Normal,1954.0
+19517,https://immovlan.be/en/detail/student-flat/for-sale/1090/jette/vbd78605,Jette,1090.0,studentHouse,studentFlat,130000.0,111.0,20.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,New,2024.0
+19818,https://immovlan.be/en/detail/student-flat/for-sale/3010/kessel-lo/rbv00938,Kessel-Lo,3010.0,studentHouse,studentFlat,193000.0,1.0,21.0,Super equipped,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2017.0
+19819,https://immovlan.be/en/detail/student-flat/for-sale/3010/kessel-lo/rbu97483,Kessel-Lo,3010.0,studentHouse,studentFlat,187000.0,1.0,19.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Normal,2018.0
+20442,https://immovlan.be/en/detail/student-flat/for-sale/8500/kortrijk/rbv03416,Kortrijk,8500.0,studentHouse,studentFlat,125000.0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+20451,https://immovlan.be/en/detail/student-flat/for-sale/8500/kortrijk/rbu87529,Kortrijk,8500.0,studentHouse,studentFlat,175000.0,1.0,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+20493,https://immovlan.be/en/detail/student-flat/for-sale/8500/kortrijk/rbu56149,Kortrijk,8500.0,studentHouse,studentFlat,149000.0,1.0,18.0,Fully equipped,N/A,1.0,N/A,N/A,N/A,N/A,N/A,N/A,New,2024.0
+21167,https://immovlan.be/en/detail/student-flat/for-sale/3000/leuven/rbv34497,Leuven,3000.0,studentHouse,studentFlat,235000.0,1.0,16.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1963.0
+21168,https://immovlan.be/en/detail/student-flat/for-sale/3000/leuven/rbv34496,Leuven,3000.0,studentHouse,studentFlat,240000.0,1.0,20.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,1963.0
+21182,https://immovlan.be/en/detail/student-flat/for-sale/3000/leuven/rbv26661,Leuven,3000.0,studentHouse,studentFlat,235000.0,1.0,15.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,2017.0
+21183,https://immovlan.be/en/detail/student-flat/for-sale/3000/leuven/rbv26660,Leuven,3000.0,studentHouse,studentFlat,235000.0,1.0,15.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,2017.0
+21184,https://immovlan.be/en/detail/student-flat/for-sale/3000/leuven/rbv25348,Leuven,3000.0,studentHouse,studentFlat,199000.0,1.0,37.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,2008.0
+21199,https://immovlan.be/en/detail/student-flat/for-sale/3000/leuven/vbd78263,Leuven,3000.0,studentHouse,studentFlat,130000.0,N/A,21.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2012.0
+21208,https://immovlan.be/en/detail/student-flat/for-sale/3000/leuven/rbv00919,Leuven,3000.0,studentHouse,studentFlat,125000.0,1.0,17.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Normal,2015.0
+21215,https://immovlan.be/en/detail/student-flat/for-sale/3000/leuven/rbu95675,Leuven,3000.0,studentHouse,studentFlat,140000.0,1.0,17.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,2015.0
+23139,https://immovlan.be/en/detail/student-flat/for-sale/7000/mons/vbd27427,Mons,7000.0,studentHouse,studentFlat,156000.0,1.0,15.0,Super equipped,N/A,1.0,N/A,N/A,N/A,N/A,N/A,N/A,New,2025.0
+23139,https://immovlan.be/en/detail/student-flat/for-sale/7000/mons/vbd27427,Mons,7000.0,studentHouse,studentFlat,156000.0,1.0,15.0,Super equipped,N/A,1.0,N/A,N/A,N/A,N/A,N/A,N/A,New,2025.0
+27635,https://immovlan.be/en/detail/student-flat/for-sale/4900/spa/vbc87641,Spa,4900.0,studentHouse,studentFlat,99000.0,1.0,23.0,N/A,N/A,1.0,N/A,N/A,N/A,N/A,N/A,N/A,Excellent,N/A
