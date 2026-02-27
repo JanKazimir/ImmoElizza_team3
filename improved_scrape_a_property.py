@@ -235,16 +235,15 @@ def improved_scrape_data_from_property_page(
             if data_row.find("h4", string="Surface terrace"):
                 terrace_area_with_units = (data_row.find("h4", string="Surface terrace").find_next_sibling().get_text())
                 terrace_area_no_units = terrace_area_with_units[:-2]
-                property_data["terrace_area_m2"] = terrace_area_no_units
+                property_data["terrace_area_m2"] = int(terrace_area_no_units)
 
 
             # Garden : True , false or Unknown
             if data_row.find("h4", string="Garden"):
-                if (
-                    data_row.find("h4", string="Garden").find_next_sibling().get_text()
-                    == "Yes"
-                ):
+                if (data_row.find("h4", string="Garden").find_next_sibling().get_text()== "Yes"):
                     property_data["has_garden"] = True
+                if (data_row.find("h4", string="Garden").find_next_sibling().get_text()== "No"):
+                    property_data["has_garden"] = False
 
 
 
@@ -252,14 +251,14 @@ def improved_scrape_data_from_property_page(
             if data_row.find("h4", string="Surface garden"):
                 garden_area_with_units = (data_row.find("h4", string="Surface garden").find_next_sibling().get_text())
                 garden_area_no_units = garden_area_with_units[:-2]
-                property_data["garden_area_m2"] = garden_area_no_units
+                property_data["garden_area_m2"] = int(garden_area_no_units)
 
 
             # Total Land surface : int or unknown
             if data_row.find("h4", string="Total land surface"):
                 property_area_with_units = (data_row.find("h4", string="Total land surface").find_next_sibling().get_text())
                 property_area_no_units = property_area_with_units[:-2]
-                property_data["land_area_m2"] = int(property_area_no_units[:-2])
+                property_data["land_area_m2"] = int(property_area_no_units)
 
 
 
@@ -337,7 +336,7 @@ def improved_scrape_data_from_property_page(
 
     # print(property_data)
     # print("Page scrapped!")
-    append_dict_jsonl(property_data, target_path)
+        append_dict_jsonl(property_data, target_path)
     return property_data
 
 
