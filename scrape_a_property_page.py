@@ -241,4 +241,6 @@ def scrape_data_from_property_page(
 
 if __name__ == "__main__":
     url = "https://immovlan.be/en/detail/ground-floor/for-sale/1050/elsene/vbd49955"
-    scrape_data_from_property_page(url)
+    scrape_data_from_property_page(
+        url, page_index=1, session=None, target_path="testing_scrape_a_page.jsonl"
+    )
