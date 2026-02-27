@@ -80,6 +80,99 @@ property_data = {
     "building_condition": str , ✅
     "build_year": int ✅
 }
+More fields to get: let's prioritize:
+
+Cellar
+Yes
+
+Garage
+Yes
+
+Balcony
+Yes
+
+Elevator
+Yes
+
+Access for disabled
+No
+
+
+Fireplace
+No
+
+Specific primary energy consumption
+45 kWh/m²/year
+
+EPC/PEB reference
+A
+
+
+Type of glazing
+Double glass
+
+Low-energy house
+Yes
+
+Solar panels
+Yes
+
+Floor heating
+Yes
+
+Heat pump
+Yes
+
+
+Number of garages
+1
+
+
+Surface of living-room
+32 m²
+
+Surface bedroom 1
+15 m²
+
+Surface bedroom 2
+14 m²
+
+
+Surface kitchen
+9 m²
+
+Number of bathrooms
+1
+
+Number of showers
+1
+
+Surface of the bathroom(s)
+5 m²
+
+
+
+
+Fireplace
+No
+
+Access for disabled
+Yes
+
+Balcony
+Yes
+
+Specific primary energy consumption
+45 kWh/m²/year
+
+EPC/PEB reference
+A
+
+
+
+
+
+
 
 
 ## problems:
