@@ -226,25 +226,17 @@ def improved_scrape_data_from_property_page(
 
             # Terrace : True else False
             if data_row.find("h4", string="Terrace"):
-                if (
-                    data_row.find("h4", string="Terrace").find_next_sibling().get_text()
-                    == "Yes"
-                ):
+                if (data_row.find("h4", string="Terrace").find_next_sibling().get_text()== "Yes"):
                     property_data["has_terrace"] = True
-                if (
-                    data_row.find("h4", string="Terrace").find_next_sibling().get_text()
-                    == "No"
-                ):
+                if (data_row.find("h4", string="Terrace").find_next_sibling().get_text()== "No"):
                     property_data["has_terrace"] = False
 
             ## Terrace surface:
             if data_row.find("h4", string="Surface terrace"):
-                property_data["terrace_area_m2"] = (
-                    data_row.find("h4", string="Surface terrace")
-                    .find_next_sibling()
-                    .get_text()
-                )
-            # else: property_data["terrace_surface"] = "Unknown"
+                terrace_area_with_units = (data_row.find("h4", string="Surface terrace").find_next_sibling().get_text())
+                terrace_area_no_units = terrace_area_with_units[:-2]
+                property_data["terrace_area_m2"] = terrace_area_no_units
+
 
             # Garden : True , false or Unknown
             if data_row.find("h4", string="Garden"):
@@ -258,17 +250,16 @@ def improved_scrape_data_from_property_page(
 
             ## Garden Surface:
             if data_row.find("h4", string="Surface garden"):
-                property_data["garden_area_m2"] = (
-                    data_row.find("h4", string="Surface garden")
-                    .find_next_sibling()
-                    .get_text()
-                )
+                garden_area_with_units = (data_row.find("h4", string="Surface garden").find_next_sibling().get_text())
+                garden_area_no_units = garden_area_with_units[:-2]
+                property_data["garden_area_m2"] = garden_area_no_units
+
 
             # Total Land surface : int or unknown
             if data_row.find("h4", string="Total land surface"):
                 property_area_with_units = (data_row.find("h4", string="Total land surface").find_next_sibling().get_text())
                 property_area_no_units = property_area_with_units[:-2]
-                property_data["land_area_m2"] = int(property_area_with_units[:-2])
+                property_data["land_area_m2"] = int(property_area_no_units[:-2])
 
 
 
