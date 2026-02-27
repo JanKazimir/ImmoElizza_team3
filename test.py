@@ -211,7 +211,7 @@ def get_final_list(page):
         with requests.Session() as s:
             headers = {"User-Agent": "Chrome", "Connection": "keep-alive"}
             r = s.get(url, headers=headers, timeout=10)
-            print(f"✅ Zip {page['zip']} elaborato ({len(articles)} annunci)")
+            print(f" Zip {page['zip']} elaborato ({len(articles)} annunci)")
 
             time.sleep(0.2)
 
