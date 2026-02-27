@@ -37,14 +37,13 @@ def scrape_all_property_pages(source_file, target_path):
     ## here we get the list
     print("starting at:")
     print(datetime.now())
-    list_of_links = ["https://immovlan.be/en/detail/apartment/for-sale/1050/elsene/vbd91331", "https://immovlan.be/en/detail/apartment/for-sale/5000/namur/vbd89112", "https://immovlan.be/en/detail/residence/for-sale/4000/liege/vbd90637"]
     
     links_as_dict = open_json_and_put_links_in_dict(source_file)
     #print(links_as_dict)
     with requests.Session() as session:
         for index, url in links_as_dict.items():
-            if int(index) <= 29490:
-                continue
+            #if int(index) <= 29490:
+            #    continue
             time.sleep(0.01)
             print(f"Scaricando pagina {index}...", end="\r")
             try:
@@ -52,13 +51,12 @@ def scrape_all_property_pages(source_file, target_path):
             except Exception as e:
                 print(f"Got an error:{e}  on index {index}, continuing...")
                 continue
-print("finished at:")
-print(datetime.now())        
+    print("finished at:")
+    print(datetime.now())        
 
 
 
-scrape_all_property_pages("Backup_scripts/all_links_thursday_two_twenty.json", "Backup_scripts/all_links_thursday_two_twenty_output.jsonl") 
- 
+scrape_all_property_pages("input_files/200_links_for_testing.json", "200LInksfordemo.jsonl")
         
 """ 
     # We scrape all the links from a list:
