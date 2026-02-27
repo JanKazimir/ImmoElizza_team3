@@ -331,12 +331,12 @@ def improved_scrape_data_from_property_page(
                     pass
                 break
 
+        append_dict_jsonl(property_data, target_path)
+
     except Exception as e:
         print("errore su {} : {}".format(url, e))
+        return None
 
-    # print(property_data)
-    # print("Page scrapped!")
-        append_dict_jsonl(property_data, target_path)
     return property_data
 
 
