@@ -2,7 +2,8 @@ import time
 import requests
 from bs4 import BeautifulSoup
 import csv
-
+import re
+import json
 
 
 
@@ -39,8 +40,7 @@ def define_url():
 def get_pages_to_scrape():
         with requests.Session() as s:
             headers = {"User-Agent": "Chrome", "Connection": "keep-alive"}
-            url = "https://immovlan.be/en/real-estate?transactiontypes=for-sale,in-public-sale&propertytypes=house,apartment&propertysubtypes=residence,villa,mixed-building,master-house,cottage,bungalow,chalet,mansion,apartment,penthouse,ground-floor,duplex,studio,loft,triplex&sortdirection=ascending&sortby=zipcode&noindex=1"
-            hack_url = "https://immovlan.be/en/real-estate?transactiontypes=for-sale,in-public-sale&propertytypes=house,apartment&propertysubtypes=residence,villa,mixed-building,master-house,cottage,bungalow,chalet,mansion,apartment,penthouse,ground-floor,duplex,studio,loft,triplex&page=4&sortdirection=ascending&sortby=zipcode&noindex=1"
+            url = "https://immovlan.be/en/real-estate?transactiontypes=for-sale&propertytypes=house,apartment&propertysubtypes=residence,chalet,bungalow,villa,apartment,duplex,loft,penthouse&islifeannuity=no&page=5&noindex=1"
             r = s.get(url, headers=headers, timeout=10 )
             print(url, r.status_code)
             soup = BeautifulSoup(r.text, "html.parser")
@@ -55,25 +55,14 @@ def get_pages_to_scrape():
                 if link:
                     links.append(link["href"])
         
-            print(links)            
+            print(links)
+            return links            
 
 
-## Not sure about this: 
-### we should also write a url id, in case we need it for the loops       
-def write_links_to_file(data):
-    with open("links.csv", "w", newline="", encoding="utf-8") as f:
-        fieldnames= ["id", "url"]
-        
-        writer = csv.writer(f, fieldnames=fieldnames)
-        writer.writeheader
-        writer.writerows(data)
-        
-        
- 
-just_in_case_links = ['https://immovlan.be/en/detail/apartment/for-sale/1000/brussels/vbd86951', 'https://immovlan.be/en/detail/villa/for-sale/1000/brussels/rbv09716', 'https://immovlan.be/en/detail/apartment/for-sale/1000/brussels/vbd90215', 'https://immovlan.be/en/detail/studio/for-sale/1000/brussels/vbd90167', 'https://immovlan.be/en/detail/ground-floor/for-sale/1000/brussels/vbd90166', 'https://immovlan.be/en/detail/loft/for-sale/1000/brussels/vbd90160', 'https://immovlan.be/en/detail/apartment/for-sale/1000/brussels/vbd89713', 'https://immovlan.be/en/detail/apartment/for-sale/1000/brussels/rbv33376', 'https://immovlan.be/en/detail/apartment/for-sale/1000/brussels/vbd89582', 'https://immovlan.be/en/detail/penthouse/for-sale/1000/brussels/vbd89485', 'https://immovlan.be/en/detail/master-house/for-sale/1000/brussels/vbd89465', 'https://immovlan.be/en/detail/studio/for-sale/1000/brussels/vbd89451', 'https://immovlan.be/en/detail/apartment/for-sale/1000/brussels/vbd89450']
- 
+def get_pages_to_scrape_by_price():
+    pass
+    
+
+
         
 #get_pages_to_scrape()
-write_links_to_file(just_in_case_links)
-
-    

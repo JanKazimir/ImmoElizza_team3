@@ -1,0 +1,192 @@
+page_id,page_url,locality,zip_code,property_type,property_subtype,price,number_of_bedrooms,livable_surface_m2,kitchen_equipment,furnished,has_terrace,terrace_area_m2,has_garden,garden_area_m2,land_area_m2,number_of_facades,has_swimming_pool,building_condition,build_year
+1,https://immovlan.be/en/detail/residence/for-sale/2970/s-gravenwezel/rbv31132,s-Gravenwezel,2970,house,house,1395000,4,336,,,True,,True,,5251 m²,4,,Excellent,1955
+2,https://immovlan.be/en/detail/residence/for-sale/2970/schilde/vbd90394,Schilde,2970,house,house,702281,3,190,,,,,,,1239 m²,4,,New,
+3,https://immovlan.be/en/detail/residence/for-sale/2970/schilde/rbv25217,Schilde,2970,house,house,549000,2,149,,False,True,27 m²,True,,758 m²,4,,Normal,1986
+4,https://immovlan.be/en/detail/residence/for-sale/2970/schilde/vbd84494,Schilde,2970,house,house,869973,4,233,,,,,,,2001 m²,4,,New,
+5,https://immovlan.be/en/detail/residence/for-sale/2970/schilde/rbv23384,Schilde,2970,house,house,595000,4,199,,False,True,,True,,931 m²,4,,Normal,1996
+6,https://immovlan.be/en/detail/residence/for-sale/2970/schilde/vbd81185,Schilde,2970,house,house,797705,4,198,,,,,,,2682 m²,4,,New,
+7,https://immovlan.be/en/detail/residence/for-sale/2970/schilde/rbv23379,Schilde,2970,house,house,515000,3,140,,False,True,,True,,1440 m²,4,False,Normal,2005
+8,https://immovlan.be/en/detail/residence/for-sale/2970/schilde/rbv23364,Schilde,2970,house,house,398000,2,132,,False,True,,True,,237 m²,3,,Normal,1925
+9,https://immovlan.be/en/detail/residence/for-sale/2970/schilde/rbv07518,Schilde,2970,house,house,349000,3,121,,False,False,,True,150 m²,314 m²,,,To be renovated,1970
+10,https://immovlan.be/en/detail/apartment/for-sale/2970/schilde/rbv06913,Schilde,2970,appartment,flat,1185000,3,364,,False,True,48 m²,,,,,,,2015
+11,https://immovlan.be/en/detail/duplex/for-sale/2970/schilde/rbv06912,Schilde,2970,appartment,duplex,1185000,3,364,,False,True,48 m²,,,,,,,2015
+12,https://immovlan.be/en/detail/residence/for-sale/2970/schilde/vbd64401,Schilde,2970,house,house,572351,3,138,,,,,True,,369 m²,3,,New,
+13,https://immovlan.be/en/detail/villa/for-sale/2970/schilde/rbu85521,Schilde,2970,house,villa,1595000,5,540,,False,True,,True,,3896 m²,,False,,1974
+14,https://immovlan.be/en/detail/residence/for-sale/2970/schilde/vbd75618,Schilde,2970,house,house,583980,5,160,,,,,,,768 m²,2,,New,
+15,https://immovlan.be/en/detail/residence/for-sale/2970/schilde/vbd67435,Schilde,2970,house,house,1065994,4,363,,,,,,,2963 m²,4,,New,
+16,https://immovlan.be/en/detail/apartment/for-sale/3700/berg/rbv35175,Berg,3700,appartment,flat,275000,2,0,,,True,9 m²,,,,,,Excellent,2021
+17,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbv26015,Berg,3700,house,house,249000,2,150,,,False,,,,347 m²,,,,1955
+18,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbv25755,Berg,3700,house,house,399000,4,278,,,False,,True,,265 m²,,,,1850
+20,https://immovlan.be/en/detail/investment-property/for-sale/3700/berg/rbv23155,Berg,3700,investmentProperty,returnBuilding,550000,,0,,,,,,,,,,To be renovated,1930
+21,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbv13175,Berg,3700,house,house,144000,2,100,,False,False,,,,70 m²,,,To be renovated,1953
+22,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbv13174,Berg,3700,house,house,130000,1,100,,False,False,,True,,100 m²,,,To be renovated,1899
+23,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbv24662,Berg,3700,house,house,299000,3,175,,,False,,True,,520 m²,,,,1963
+24,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbv24661,Berg,3700,house,house,140000,3,100,,,False,,,,160 m²,,,,1918
+25,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbv24579,Berg,3700,house,house,187500,3,143,,,True,5 m²,,,60 m²,2,,,1939
+26,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbv16619,Berg,3700,house,house,249000,3,190,,,False,,True,,460 m²,3,,,1966
+27,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbv16314,Berg,3700,house,house,295000,4,173,,,True,27 m²,True,,242 m²,2,,,1954
+28,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbv16313,Berg,3700,house,house,295000,4,170,,,True,27 m²,True,,253 m²,2,,,1954
+29,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbv15117,Berg,3700,house,house,359000,3,279,,,True,,True,,157 m²,,,,1950
+30,https://immovlan.be/en/detail/investment-property/for-sale/3700/berg/rbv15116,Berg,3700,investmentProperty,returnBuilding,525000,,0,,,,,,,,,,,
+31,https://immovlan.be/en/detail/investment-property/for-sale/3700/berg/rbv15113,Berg,3700,investmentProperty,returnBuilding,525000,,0,,,,,,,,,,,
+32,https://immovlan.be/en/detail/investment-property/for-sale/3700/berg/rbv15112,Berg,3700,investmentProperty,returnBuilding,525000,,0,,,,,,,,,,,
+33,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbv13030,Berg,3700,house,house,219000,3,139,,,True,,True,,165 m²,,,,1930
+34,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbv13029,Berg,3700,house,house,169900,4,121,,,False,,True,,140 m²,,,,1930
+35,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbv13026,Berg,3700,house,house,270000,2,119,,,True,,True,,150 m²,,,,1930
+36,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbu48923,Berg,3700,house,house,283000,3,166,,,False,,True,,991 m²,,,,1918
+37,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbu87600,Berg,3700,house,house,350000,6,0,,,True,14 m²,True,,,2,,Excellent,1974
+38,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbu83970,Berg,3700,house,house,599000,3,265,,,False,,True,,1058 m²,4,,New,
+39,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbu77020,Berg,3700,house,house,295000,4,156,,,False,,,,3862 m²,3,,,1961
+40,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbu75253,Berg,3700,house,house,186000,2,99,,,True,22 m²,True,,90 m²,2,,,1918
+41,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbu43425,Berg,3700,house,house,229000,4,156,,,True,,,,110 m²,,,Excellent,1850
+42,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbu59331,Berg,3700,house,house,249000,,139,,,False,,True,,692 m²,,,,1963
+43,https://immovlan.be/en/detail/investment-property/for-sale/3700/berg/rbu33643,Berg,3700,investmentProperty,returnBuilding,400000,,0,,,,,,,4515 m²,,,,
+44,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbt09989,Berg,3700,house,house,245000,3,187,Fully equipped,,,,True,,670 m²,3,False,,1930
+45,https://immovlan.be/en/detail/residence/for-sale/3700/berg/rbu24752,Berg,3700,house,house,199000,8,0,,,True,,,,325 m²,2,,To be renovated,1938
+46,https://immovlan.be/en/detail/loft/for-sale/3700/tongeren/rbv29586,Tongeren,3700,appartment,loft,375000,2,138,,,True,27 m²,,,,,,,2018
+47,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/rbv26012,Tongeren,3700,appartment,flat,286500,3,130,,,True,4 m²,,,,2,,,1968
+49,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/rbv23156,Tongeren,3700,appartment,flat,199000,2,106,,,True,6 m²,,,,3,,To be renovated,1930
+50,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/rbv23154,Tongeren,3700,appartment,flat,199000,2,114,,,False,,,,,3,,To be renovated,1930
+51,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/rbv23153,Tongeren,3700,appartment,flat,199000,2,114,,,False,,,,,3,,To be renovated,1930
+52,https://immovlan.be/en/detail/residence/for-sale/3700/tongeren/vbd83990,Tongeren,3700,house,house,360000,3,153,Fully equipped,,True,,True,103 m²,268 m²,3,,Excellent,
+55,https://immovlan.be/en/detail/residence/for-sale/3700/tongeren/rbu24811,Tongeren,3700,house,house,175000,4,0,,,False,,,,200 m²,,,To be renovated,1874
+56,https://immovlan.be/en/detail/cottage/for-sale/3700/tongeren/vbd79932,Tongeren,3700,house,cottage,558000,4,225,,,True,,True,1200 m²,,,,,
+57,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/rbu58324,Tongeren,3700,appartment,flat,215000,2,87,,,True,12 m²,,,,2,,Excellent,2005
+58,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/rbv17268,Tongeren,3700,appartment,flat,257000,1,68,,,True,7 m²,,,,,,,2021
+59,https://immovlan.be/en/detail/mixed-building/for-sale/3700/tongeren/vbd80870,Tongeren,3700,house,mixedBuilding,3800000,,0,,,,,,,,2,,,
+60,https://immovlan.be/en/detail/residence/for-sale/3700/tongeren/rwc41676,Tongeren,3700,house,house,558000,4,230,,,True,16 m²,True,1050 m²,,4,,Normal,1969
+61,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/rbv04502,Tongeren,3700,appartment,flat,189000,2,60,,,True,,,,,2,,,1966
+62,https://immovlan.be/en/detail/residence/for-sale/3700/tongeren/rbv04496,Tongeren,3700,house,house,249000,3,131,,,False,,True,,1089 m²,,,,1937
+63,https://immovlan.be/en/detail/residence/for-sale/3700/tongeren/rbu97311,Tongeren,3700,house,house,255000,3,224,,,True,,True,,220 m²,3,,Excellent,1954
+64,https://immovlan.be/en/detail/residence/for-sale/3700/tongeren/rbu88661,Tongeren,3700,house,house,349000,2,258,,,False,,,,258 m²,,,,1920
+65,https://immovlan.be/en/detail/residence/for-sale/3700/tongeren/rbu61318,Tongeren,3700,house,house,575000,7,391,,,True,,True,,312 m²,2,,,1938
+66,https://immovlan.be/en/detail/residence/for-sale/3700/tongeren/rbu85590,Tongeren,3700,house,house,150000,3,105,,,False,,,,55 m²,2,,,1899
+67,https://immovlan.be/en/detail/residence/for-sale/3700/tongeren/rbu84540,Tongeren,3700,house,house,390000,5,188,,,True,,True,,961 m²,,,,1964
+68,https://immovlan.be/en/detail/residence/for-sale/3700/tongeren/rbu74426,Tongeren,3700,house,house,449000,6,250,,,False,,True,,,4,,To be renovated,1975
+69,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/rbu61321,Tongeren,3700,appartment,flat,529900,3,188,,,True,56 m²,,,,,,New,2023
+70,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/rbu58284,Tongeren,3700,appartment,flat,310000,3,187,,,True,20 m²,,,,2,,To be renovated,1970
+71,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/rbu58281,Tongeren,3700,appartment,flat,299000,3,0,,,True,8 m²,True,,,,,,2023
+72,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/rbu58280,Tongeren,3700,appartment,flat,189000,1,0,,,True,6 m²,True,,,,,New,2023
+73,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/rbu58279,Tongeren,3700,appartment,flat,179000,1,0,,,True,5 m²,True,,,,,New,2023
+74,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/rbu58278,Tongeren,3700,appartment,flat,325000,3,0,,,True,12 m²,True,,,,,New,2023
+75,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/rbu58277,Tongeren,3700,appartment,flat,189000,1,0,,,True,6 m²,True,,,,,New,2023
+76,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/rbu58274,Tongeren,3700,appartment,flat,180000,2,102,,,False,,,,,,,To be renovated,1972
+77,https://immovlan.be/en/detail/residence/for-sale/3700/rutten/rbu38993,Rutten,3700,house,house,325000,4,185,,,True,,True,,478 m²,3,,New,2024
+78,https://immovlan.be/en/detail/residence/for-sale/3700/tongeren/rbu23066,Tongeren,3700,house,house,450000,4,235,,,True,60 m²,,,845 m²,4,,,1947
+79,https://immovlan.be/en/detail/residence/for-sale/3700/tongeren/rbt78923,Tongeren,3700,house,house,174900,2,97,,False,False,,,,35 m²,2,False,Normal,1850
+80,https://immovlan.be/en/detail/residence/for-sale/3700/tongeren/rbv04501,Tongeren,3700,house,house,279000,4,180,,,True,,,,180 m²,,,Excellent,1918
+81,https://immovlan.be/en/detail/residence/for-sale/3700/tongeren/rbv04500,Tongeren,3700,house,house,279000,3,156,,,True,,True,,713 m²,,,,1966
+82,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/rbv04499,Tongeren,3700,appartment,flat,205000,2,0,,,True,,,,,,,Excellent,1966
+83,https://immovlan.be/en/detail/apartment/for-sale/3700/tongeren/vbd69042,Tongeren,3700,appartment,flat,169000,1,70,Partially equipped,False,True,10 m²,,,,2,False,,1966
+84,https://immovlan.be/en/detail/residence/for-sale/9420/aaigem/rbt72537,Aaigem,9420,house,house,525000,4,295,,False,True,50 m²,True,1500 m²,,,False,Normal,
+85,https://immovlan.be/en/detail/residence/for-sale/9420/aaigem/rbe65028,Aaigem,9420,house,house,850000,3,286,,False,True,38 m²,True,,,4,False,Normal,2004
+86,https://immovlan.be/en/detail/villa/for-sale/9420/aaigem/rbe65025,Aaigem,9420,house,villa,850000,3,286,,False,True,38 m²,True,,,4,False,Normal,2004
+87,https://immovlan.be/en/detail/villa/for-sale/9420/aaigem/rbe08389,Aaigem,9420,house,villa,1195000,4,323,,False,True,10 m²,True,,3032 m²,4,,,1985
+88,https://immovlan.be/en/detail/residence/for-sale/9420/aaigem/rbd97636,Aaigem,9420,house,house,1195000,4,323,,False,True,10 m²,True,,3032 m²,4,,,1985
+89,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbv35500,Erpe-Mere,9420,house,house,349000,3,202,,,,,,,293 m²,3,,,1932
+90,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbv29993,Erpe-Mere,9420,house,house,349000,3,229,,,True,,,,253 m²,3,,To be renovated,1963
+91,https://immovlan.be/en/detail/villa/for-sale/9420/erpe-mere/rwc41858,Erpe-Mere,9420,house,villa,344000,4,180,Fully equipped,,True,,True,200 m²,532 m²,4,,Normal,1993
+92,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbu84806,Erpe-Mere,9420,house,house,285000,3,150,,False,True,30 m²,True,90 m²,180 m²,2,,,2024
+93,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbu84805,Erpe-Mere,9420,house,house,315000,3,153,,False,True,,True,90 m²,184 m²,3,,,2024
+94,https://immovlan.be/en/detail/investment-property/for-sale/9420/erpe-mere/rbv13163,Erpe-Mere,9420,investmentProperty,returnBuilding,695000,20,845,,,True,100 m²,True,800 m²,,,,Normal,
+95,https://immovlan.be/en/detail/villa/for-sale/9420/erpe-mere/rbu86381,Erpe-Mere,9420,house,villa,578000,3,215,,False,True,35 m²,True,2100 m²,,,,Excellent,
+96,https://immovlan.be/en/detail/apartment/for-sale/9420/erpe/rbj34011,Erpe,9420,appartment,flat,179000,1,57,Fully equipped,False,True,,True,,,,,Normal,
+97,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbv25275,Erpe-Mere,9420,house,house,398000,3,362,,False,True,45 m²,True,100 m²,,,,Normal,
+98,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbv25271,Erpe-Mere,9420,house,house,210000,3,232,,False,True,10 m²,True,76 m²,,,,Normal,
+99,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/vbd83294,Erpe-Mere,9420,house,house,443469,3,166,,,,,,,327 m²,3,,New,
+100,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/vbd83293,Erpe-Mere,9420,house,house,485007,4,207,,,,,,,450 m²,3,,New,
+101,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbv12461,Erpe-Mere,9420,house,house,749000,6,413,Super equipped,False,True,80 m²,True,385 m²,863 m²,2,False,Excellent,1993
+102,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbv13164,Erpe-Mere,9420,house,house,695000,20,845,,True,True,100 m²,True,800 m²,,,,Normal,
+103,https://immovlan.be/en/detail/residence/for-sale/9420/mere/rbv02117,Mere,9420,house,house,199000,4,248,,False,False,,,,350 m²,3,,To be renovated,1965
+104,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbv01223,Erpe-Mere,9420,house,house,412000,3,152,,,False,,True,,555 m²,3,,New,
+105,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbv01222,Erpe-Mere,9420,house,house,416000,3,152,,,False,,True,,527 m²,3,,New,
+106,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbv01219,Erpe-Mere,9420,house,house,0,,0,,,False,,,,,,,New,
+107,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbu99678,Erpe-Mere,9420,house,house,419000,5,235,,False,True,143 m²,True,3058 m²,,,,Normal,
+108,https://immovlan.be/en/detail/residence/for-sale/9420/mere/rbu98152,Mere,9420,house,house,349000,3,144,,False,False,,True,,2107 m²,4,,To be renovated,1960
+109,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbu89717,Erpe-Mere,9420,house,house,395000,3,226,,False,False,,,,,,,To be renovated,
+110,https://immovlan.be/en/detail/residence/for-sale/9420/erpe/vbd64400,Erpe,9420,house,house,490625,3,167,,,,,,,487 m²,3,,New,
+111,https://immovlan.be/en/detail/villa/for-sale/9420/erpe-mere/rbu86385,Erpe-Mere,9420,house,villa,1195000,4,300,,False,True,50 m²,True,650 m²,,,False,New,
+112,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/vbd61571,Erpe-Mere,9420,house,house,459000,3,168,,,,,,,439 m²,3,,New,
+113,https://immovlan.be/en/detail/residence/for-sale/9420/erpe/vbd61570,Erpe,9420,house,house,435000,3,168,,,,,,,458 m²,3,,New,
+114,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbu78217,Erpe-Mere,9420,house,house,595000,6,220,,False,False,,,,,,,Excellent,
+115,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbu66750,Erpe-Mere,9420,house,house,299000,4,200,Fully equipped,False,True,,True,,540 m²,3,,To renovate,1949
+116,https://immovlan.be/en/detail/residence/for-sale/9420/erpe/vbd47874,Erpe,9420,house,house,434942,3,132,,,,,,,495 m²,3,,New,
+117,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbu62410,Erpe-Mere,9420,house,house,885000,4,400,Super equipped,False,True,,True,1167 m²,1167 m²,3,False,Excellent,2018
+118,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbu17111,Erpe-Mere,9420,house,house,379000,3,152,,False,True,28 m²,True,150 m²,,,,Excellent,
+119,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/vbd16226,Erpe-Mere,9420,house,house,789840,4,346,,,True,,True,2300 m²,2586 m²,4,,New,
+120,https://immovlan.be/en/detail/duplex/for-sale/9420/erpe-mere/rbu11976,Erpe-Mere,9420,appartment,duplex,319000,3,170,,False,True,7 m²,,,,,,Excellent,
+121,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbt99501,Erpe-Mere,9420,house,house,295000,3,200,,False,True,30 m²,True,360 m²,,,,Normal,
+122,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbt82126,Erpe-Mere,9420,house,house,265000,3,195,,False,True,16 m²,True,20 m²,,,False,Excellent,
+123,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbt68678,Erpe-Mere,9420,house,house,985000,3,400,Super equipped,False,True,,True,1167 m²,1167 m²,3,False,Excellent,2018
+124,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbt37453,Erpe-Mere,9420,house,house,347850,4,195,Fully equipped,False,,,True,,,,False,Normal,
+125,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbt14921,Erpe-Mere,9420,house,house,539000,3,172,Fully equipped,False,False,,True,240 m²,,,,New,
+126,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rwc39039,Erpe-Mere,9420,house,house,365550,3,262,Super equipped,,,,,,262 m²,3,,Excellent,2025
+127,https://immovlan.be/en/detail/residence/for-sale/9420/erpe-mere/rbv10615,Erpe-Mere,9420,house,house,249000,2,138,,False,True,17 m²,True,11 m²,,,,Excellent,
+128,https://immovlan.be/en/detail/master-house/for-sale/8511/aalbeke/rbv07979,Aalbeke,8511,house,masterHouse,695000,3,400,Fully equipped,True,True,,True,800 m²,934 m²,3,False,Normal,1984
+129,https://immovlan.be/en/detail/residence/for-sale/8511/aalbeke/vbd73075,Aalbeke,8511,house,house,575000,3,230,Super equipped,False,True,,True,200 m²,500 m²,4,False,Normal,2000
+130,https://immovlan.be/en/detail/residence/for-sale/8511/aalbeke/vbd70372,Aalbeke,8511,house,house,289000,3,181,Partially equipped,False,True,,True,40 m²,752 m²,3,False,Normal,1960
+131,https://immovlan.be/en/detail/master-house/for-sale/8511/aalbeke/rbu98133,Aalbeke,8511,house,masterHouse,695000,3,400,Fully equipped,True,True,,True,800 m²,934 m²,3,False,Normal,1984
+132,https://immovlan.be/en/detail/residence/for-sale/8511/aalbeke/rbu93360,Aalbeke,8511,house,house,349500,3,146,,,False,,True,,483 m²,2,,Excellent,1991
+133,https://immovlan.be/en/detail/villa/for-sale/8511/aalbeke/rbu60663,Aalbeke,8511,house,villa,935000,4,303,,False,True,,True,,1250 m²,4,False,,1972
+135,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv35093,Sint-Truiden,3800,house,house,401600,2,134,,False,True,15 m²,True,,,3,,Normal,1956
+136,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv35092,Sint-Truiden,3800,house,house,401600,2,134,,False,True,15 m²,True,,,2,,Normal,1956
+137,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv35091,Sint-Truiden,3800,house,house,365000,3,110,,False,True,20 m²,True,77 m²,240 m²,2,,,2018
+138,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv35090,Sint-Truiden,3800,house,house,497000,3,204,,False,True,15 m²,True,,,3,,Normal,1956
+139,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv34957,Sint-Truiden,3800,house,house,209000,3,167,,,False,,,,888 m²,,,,1954
+140,https://immovlan.be/en/detail/apartment/for-sale/3800/sint-truiden/rbv34956,Sint-Truiden,3800,appartment,flat,296000,1,80,,,False,,,,,,,,2010
+141,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv31168,Sint-Truiden,3800,house,house,435000,4,186,,,True,22 m²,True,,508 m²,,,New,2025
+142,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv29585,Sint-Truiden,3800,house,house,329000,3,394,,,True,,,,168 m²,2,,Excellent,1968
+143,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv28959,Sint-Truiden,3800,house,house,435000,4,186,,False,True,21 m²,True,,,3,,New,2025
+144,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv28101,Sint-Truiden,3800,house,house,415000,3,155,,,True,,True,,294 m²,3,,New,2020
+145,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv27351,Sint-Truiden,3800,house,house,285000,5,350,,False,False,,,,1614 m²,,,To be renovated,1936
+146,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv26639,Sint-Truiden,3800,house,house,349000,3,182,,,True,,True,,1122 m²,4,,,1964
+147,https://immovlan.be/en/detail/apartment/for-sale/3800/sint-truiden/rbu98893,Sint-Truiden,3800,appartment,flat,295000,2,84,,,True,,,,,2,,,1990
+148,https://immovlan.be/en/detail/apartment/for-sale/3800/sint-truiden/rbv26013,Sint-Truiden,3800,appartment,flat,219000,2,121,,,False,,,,,,,,1965
+149,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu51725,Sint-Truiden,3800,house,house,150000,3,112,,,False,,,,66 m²,2,,To be renovated,1930
+152,https://immovlan.be/en/detail/apartment/for-sale/3800/sint-truiden/rbv16264,Sint-Truiden,3800,appartment,flat,199000,2,0,,,True,,,,,,,,1990
+154,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv16679,Sint-Truiden,3800,house,house,239000,3,146,,,True,17 m²,True,,65 m²,2,,Excellent,1984
+155,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv15114,Sint-Truiden,3800,house,house,195000,2,134,,,False,,,,870 m²,,,,1936
+156,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv13177,Sint-Truiden,3800,house,house,159000,2,190,,False,False,,,,1719 m²,,,To be renovated,1918
+157,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv13025,Sint-Truiden,3800,house,house,359000,3,145,,,True,,True,,335 m²,,,,2007
+158,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv02895,Sint-Truiden,3800,house,house,425000,3,241,,False,True,38 m²,True,,322 m²,3,,Normal,1985
+159,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu99223,Sint-Truiden,3800,house,house,825000,4,333,,,True,,True,,275 m²,,False,,1918
+160,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu95954,Sint-Truiden,3800,house,house,249000,2,182,,,False,,True,,344 m²,3,,,1940
+161,https://immovlan.be/en/detail/apartment/for-sale/3800/sint-truiden/rbu93870,Sint-Truiden,3800,appartment,flat,259000,2,101,,,True,,,,,,,,1969
+162,https://immovlan.be/en/detail/apartment/for-sale/3800/sint-truiden/rbu93868,Sint-Truiden,3800,appartment,flat,1599000,3,750,,,False,,,,,,,,1850
+163,https://immovlan.be/en/detail/mixed-building/for-sale/3800/sint-truiden/rbu93867,Sint-Truiden,3800,house,mixedBuilding,1599000,3,750,,,False,,,,395 m²,,,,1850
+164,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu91672,Sint-Truiden,3800,house,house,249000,3,200,,False,False,,True,,1067 m²,,,Normal,1950
+165,https://immovlan.be/en/detail/apartment/for-sale/3800/sint-truiden/rbu91626,Sint-Truiden,3800,appartment,flat,215000,3,193,,,True,,,,,,,,1968
+166,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu91182,Sint-Truiden,3800,house,house,320000,2,94,,,True,,True,,1178 m²,,,,1963
+167,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu65932,Sint-Truiden,3800,house,house,170000,3,176,,,False,,True,,286 m²,,,,1937
+168,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu84465,Sint-Truiden,3800,house,house,320000,3,252,,,False,,True,,10 m²,2,,,1964
+169,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/vbd59608,Sint-Truiden,3800,house,house,330000,4,179,Partially equipped,False,True,25 m²,,,595 m²,3,False,Normal,1970
+170,https://immovlan.be/en/detail/investment-property/for-sale/3800/sint-truiden/rbu80502,Sint-Truiden,3800,investmentProperty,returnBuilding,757000,4,206,,,,,,,,2,,New,
+171,https://immovlan.be/en/detail/apartment/for-sale/3800/sint-truiden/rbu74801,Sint-Truiden,3800,appartment,flat,330000,2,131,,,True,,,,,,,,1995
+172,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu73043,Sint-Truiden,3800,house,house,439000,3,321,,,True,,True,,315 m²,2,,Normal,1952
+173,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu67773,Sint-Truiden,3800,house,house,200000,3,130,,,False,,,,130 m²,,,,1920
+174,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu67212,Sint-Truiden,3800,house,house,389000,3,283,,,True,20 m²,True,,646 m²,3,,,1979
+175,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu67199,Sint-Truiden,3800,house,house,535000,15,0,,,False,,,,408 m²,,,Excellent,1971
+176,https://immovlan.be/en/detail/apartment/for-sale/3800/sint-truiden/rbu60591,Sint-Truiden,3800,appartment,flat,439000,1,87,,,True,,,,,,,,1960
+177,https://immovlan.be/en/detail/apartment/for-sale/3800/sint-truiden/rbu51906,Sint-Truiden,3800,appartment,flat,300000,2,70,,,False,,,,,,,,1961
+178,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu50470,Sint-Truiden,3800,house,house,795000,6,486,,,False,,True,,7956 m²,4,,,1875
+179,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu40967,Sint-Truiden,3800,house,house,189000,3,215,,,True,30 m²,,,365 m²,3,,,1850
+180,https://immovlan.be/en/detail/mixed-building/for-sale/3800/sint-truiden/rbu34230,Sint-Truiden,3800,house,mixedBuilding,475000,4,393,,,False,,,,120 m²,,,,1948
+181,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu34227,Sint-Truiden,3800,house,house,890000,4,275,,,False,,True,,2850 m²,,,,1976
+182,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/vbd29902,Sint-Truiden,3800,house,house,395000,4,179,Partially equipped,False,True,25 m²,True,,595 m²,3,False,Normal,1970
+183,https://immovlan.be/en/detail/apartment/for-sale/3800/sint-truiden/rbu24774,Sint-Truiden,3800,appartment,flat,169000,2,0,,,False,,,,,,,Excellent,1968
+184,https://immovlan.be/en/detail/mixed-building/for-sale/3800/sint-truiden/rbu28436,Sint-Truiden,3800,house,mixedBuilding,439000,3,321,,,True,,True,,315 m²,2,,Normal,1952
+185,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu24799,Sint-Truiden,3800,house,house,275000,5,0,,,False,,True,,199 m²,,,To be renovated,1934
+186,https://immovlan.be/en/detail/apartment/for-sale/3800/sint-truiden/rbu24795,Sint-Truiden,3800,appartment,flat,298000,1,0,,,True,,,,,,,Excellent,2021
+187,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu24780,Sint-Truiden,3800,house,house,449000,4,0,,,True,,True,,319 m²,,,Excellent,1930
+188,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu24777,Sint-Truiden,3800,house,house,239000,2,0,,,False,,True,,149 m²,,,To be renovated,1977
+189,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu24746,Sint-Truiden,3800,house,house,315000,3,0,,,True,,True,,269 m²,3,,Excellent,1980
+190,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu24741,Sint-Truiden,3800,house,house,899000,6,0,,,True,,True,,509 m²,2,,Excellent,1850
+191,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu23205,Sint-Truiden,3800,house,house,394360,3,128,,False,True,17 m²,,,,2,,New,2026
+192,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu23204,Sint-Truiden,3800,house,house,394360,3,128,,False,True,17 m²,,,,2,,New,2026
+193,https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbu23203,Sint-Truiden,3800,house,house,410805,3,128,,False,True,15 m²,,,,,,New,2026
+194,https://immovlan.be/en/detail/apartment/for-sale/3800/sint-truiden/rbu01042,Sint-Truiden,3800,appartment,flat,369314,2,88,,False,True,13 m²,,,,2,,New,2025
+195,https://immovlan.be/en/detail/penthouse/for-sale/3800/sint-truiden/rbu01041,Sint-Truiden,3800,appartment,penthouse,562387,3,133,,False,True,35 m²,,,,2,,New,2025
+196,https://immovlan.be/en/detail/apartment/for-sale/3800/sint-truiden/rbu01040,Sint-Truiden,3800,appartment,flat,366885,2,88,,False,True,13 m²,,,,2,,New,2025
+197,https://immovlan.be/en/detail/penthouse/for-sale/3800/sint-truiden/rbu01039,Sint-Truiden,3800,appartment,penthouse,567182,3,134,,False,True,45 m²,,,,2,,New,2025
+198,https://immovlan.be/en/detail/penthouse/for-sale/3800/sint-truiden/rbu01038,Sint-Truiden,3800,appartment,penthouse,591283,3,136,,False,True,45 m²,,,,2,,New,2025
+199,https://immovlan.be/en/detail/penthouse/for-sale/3800/sint-truiden/rbu01036,Sint-Truiden,3800,appartment,penthouse,599753,3,136,,False,True,45 m²,,,,2,,New,2025
