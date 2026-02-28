@@ -9,8 +9,7 @@ def create_base_file(name):
     
 
 
-## Not sure about this: 
-### we should also write a url id, in case we need it for the loops       
+# takes a dict, write it      
 def write_links_to_file(links_as_dict):
     with open("test_links.csv", "w", newline="", encoding="utf-8") as f:
         fieldnames= ["page_number", "url"]

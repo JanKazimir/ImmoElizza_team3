@@ -6,21 +6,12 @@ import time
 import csv
 import json
 from datetime import datetime
-
-## Importing files
-from scrape_a_property_page import scrape_data_from_property_page
+## ❗ Importing files files will have moved in the big reorganising.
+from scrape_a_property_page_backup import scrape_data_from_property_page
 
 
 
 ## This is where we write the funciton that call on  scrape_data_from_property_page() to scrape all the page:
-# What we need to do 
-# we get a list. either as a csv or as a list. 
-
-# let's do the easy thing: make a list of three urls, and get that to work with a session
-
-# Add exception handling
-
-# scrape_data_from_property_page needs: (url, page_index, session, target_path)
 
 def open_json_and_put_links_in_dict(source_file):
     with open(source_file, "r") as f:
@@ -33,6 +24,7 @@ def open_json_and_put_links_in_dict(source_file):
         
 
 
+# this call a function to scrape property data, on a source file or urls and writes it to an output file. 
 def scrape_all_property_pages(source_file, target_path):
     ## here we get the list
     print("starting at:")
@@ -56,36 +48,5 @@ def scrape_all_property_pages(source_file, target_path):
 
 
  
-scrape_all_property_pages("200_links_for_testing.json","200_links_output.jsonl" ) 
+#scrape_all_property_pages("200_links_for_testing.json","200_links_output.jsonl" ) 
  
-        
-""" 
-    # We scrape all the links from a list:
-    for index, url in enumerate(list_of_links, start=1):
-        pass
-        url = url
-        url_index = index
-        with requests.Session() as session:
-            time.sleep(0.1)
-            print("waiting a bit...")
-            try:
-                scrape_data_from_property_page(url, url_index, session, target_path)
-            except Exception as e:
-                print(f"Got an error:{e}  on index {index}, continuing...")
-                continue
-   """          
-    
-
-
-
-
-## testing quick: works
-#url = "https://immovlan.be/en/detail/residence/for-sale/2970/schilde/rbv23379"
-#scrape_data_from_property_page(url)
-
-""" 
-            print(
-                f"Scaricando pagina {n}...", end="\r"
-            )  # end='\r' sovrascrive la stessa riga, molto pulito!
-            
-             """

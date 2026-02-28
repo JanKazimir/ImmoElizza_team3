@@ -81,10 +81,6 @@ def improved_scrape_data_from_property_page(
             "specific_primary_energy_consumption_KWh_by_m2_by_year": None,
             "has_attic": None,
             "yearly_total_primary_energy_consumption_in_kWh_by_year": None, 
-            
-            
-            
-            
             "description": None    
         }
 
