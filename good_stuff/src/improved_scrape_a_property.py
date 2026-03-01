@@ -29,14 +29,14 @@ def append_dict_jsonl(record: dict, target_path):
 
 
 def improved_scrape_data_from_property_page(
-    url, page_index, session, target_path="testing_scrape_a_page.jsonl"
-):
+    url, page_index, session, target_path="testing_scrape_a_page.jsonl"):
     headers = {"User-Agent": "Chrome", "Connection": "keep-alive"}
     # target_path =
 
     try:
         r = session.get(url, headers=headers, timeout=10)
         if r.status_code != 200:
+            print(f"{url} this url is 404")
             return None
 
         soup = BeautifulSoup(r.text, "html.parser")
@@ -342,7 +342,7 @@ def improved_scrape_data_from_property_page(
 ##
 ### Calling the functions for testing
 ##
-url = "https://immovlan.be/en/detail/residence/for-sale/6200/chatelet/vbd89512"
+url = "https://immovlan.be/en/detail/residence/for-sale/3800/sint-truiden/rbv35093"
 
 with requests.Session() as session:
     improved_scrape_data_from_property_page(url, 1, session, "improving_scrape_a_page_tests.jsonl")
