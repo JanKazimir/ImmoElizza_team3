@@ -49,9 +49,14 @@ def simpler_scrape_all_property_pages_with_index(source_file, target_path, clean
             
             with open(clean_data_path, "a", encoding="utf-8") as f:
                 for i, result in enumerate(results, 1):
-                    if result:
-                        print(f" Scraping page: {i}", end="\r")
-                        f.write(json.dumps(result, ensure_ascii=False) + "\n")
+                    try:
+                        if result:
+                            print(f" Scraping page: {i}/{len(links_rimanenti)}", end="\r")
+                            f.write(json.dumps(result, ensure_ascii=False) + "\n")
+                    except Exception as e:
+                        print(f"Error on item {i + start_index}: {e}")
+                        
+                        
                 
     finished_time = datetime.now()
     print(f"finished at: {finished_time}. Total time: {finished_time - start_time}")
