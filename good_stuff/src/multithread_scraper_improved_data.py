@@ -61,7 +61,7 @@ def simpler_scrape_all_property_pages_with_index(source_file, target_path, clean
     finished_time = datetime.now()
     print(f"finished at: {finished_time}. Total time: {finished_time - start_time}")
 
-#simpler_scrape_all_property_pages_with_index("data/input_files/200_links_for_testing.json", "test_for_simplerprint.jsonl", "testing new stuff.jsonl")
+simpler_scrape_all_property_pages_with_index("data/input_files/200_links_for_testing.json", "test_for_simplerprint.jsonl", "testing new stuff.jsonl")
 
 
 
