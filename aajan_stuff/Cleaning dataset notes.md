@@ -29,10 +29,16 @@ Thinking in terms of distribution is useful.
 
 
 
+## Data cleaning for the machine learing part:
+It's more complicated. 
+We can't have nulls, so we need to fill in or drop, but that means more fine control, more subjective analysis.
+Second, when we fill in the nulls, there are some do and don't : don't fill in the data using median from the whole data set, otherwise you have data leakage. 
+
+so it's more ccomplicated.
 
 
 
-# Some observatiosn as I go through:
+
 
 
 
@@ -70,3 +76,6 @@ Type conversion: df.astype(), pd.to_numeric(), pd.to_datetime()
 String cleaning: df['col'].str.strip(), .str.lower(), .str.replace()
 Filtering / Replacing: df[df['col'] > x], df.replace(), df.where(), df.mask()
 Apply custom logic: df.apply(fn), df.map(fn)
+
+
+## Some observatiosn as I go through:
