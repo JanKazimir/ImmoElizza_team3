@@ -9,7 +9,7 @@ from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor
 
 ## Importing files
-from improved_scrape_a_property import improved_scrape_data_from_property_page
+from data_scraping.improved_scrape_a_property import improved_scrape_data_from_property_page
 
 
 
