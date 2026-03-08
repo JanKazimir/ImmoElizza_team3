@@ -23,7 +23,7 @@ BATCH_SIZE = 50              # set to None to process all rows
 # ── Prompt options (uncomment the one you want) ────────────────────────
 
 # Option A: Conservative — only fill from explicit mentions in description
-PROMPT = """You are a data-cleaning assistant for Belgian real estate listings.
+PROMPT = """You are a data-cleaning assistant. Your job is to fill in the null fields in property listings
 
 Given the JSON record below, fill in null fields ONLY if the property description 
 explicitly mentions the information. Do NOT guess or infer. If in doubt, leave it as it is.
