@@ -1,9 +1,5 @@
 # Deployment notes
 
-Morning on study. Let's set up the repo squeecky clean.
-
-Read the readme
-
 ## Instructions:
 Deploy an api that can query the model.
     The api works with JSON
@@ -24,13 +20,19 @@ what needs to be there, what can be nan.
 - cleaning_data.py
   - has a preprocess() function, takes the input returns the preprocessed data, or an error to the user.
 
-### Prediction:
+We need to decide : 
+- what model do we use  -> What features do we keep and drop.
+
+
+
+
+### Prediction: (preprocessed input data) -> model -> return prediction
 - model/ folder at the root contains the model
 - predict/ 
   - prediction.py with predict() takes the preprocessed data and returns the price as output
 
 
-### Api
+### Api 
 In your `app.py` file, create an API that contains:
 
 - A route at `/` that accept:

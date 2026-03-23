@@ -56,8 +56,8 @@ def set_province(): # repeating some like hainaut is easier than conditionals
 set_province()
 
 ## Importing data:
-X = df.drop(columns=["price", "zip_code"]) #.to_numpy()  # We need to drop the target column
-y = df["price"].to_numpy()  #.reshape(-1 , 1)    # here we do the reshaping in place.
+X = df.drop(columns=["price", "zip_code"]) 
+y = df["price"].to_numpy()  
 
 ## Spliting the data
 X_train, X_test, y_train, y_test = train_test_split(X,y, random_state=None, test_size=0.2)
@@ -67,8 +67,6 @@ print("Data set split into: X_train, X_test, y_train, y_test")
 ###
 ### XG BOOST
 ###
-
-
 ### Columns Management:
 numeric_features = [
     "livable_surface_m2",
