@@ -54,23 +54,9 @@ def predict_price(data: HouseData):
     prediction = make_prediction(processed_df)
     
     # Return the price (we take the first result from the list)
-    return {"prediction": float(prediction)}
+    return {"prediction": round(float(prediction))}
 
 
-
-
-"""
-@app.post("/predict")
-def predict_price(data: HouseData):
-    
-    #Receives house data in JSON format and returns a predicted price.
-    #Note: Replace the dummy logic with your actual model.predict()
-    
-    # Example logic:
-    # prediction = model.predict([list(data.dict().values())])
-    prediction = 250000 
-    return {"prediction": prediction}
-    """
 
 if __name__ == "__main__":
     # Render uses the PORT environment variable
