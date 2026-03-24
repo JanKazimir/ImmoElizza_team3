@@ -39,15 +39,18 @@ input_test = {
 
 
 def preprocess(data):
-    # print(data)
-    zip_code = data["zip_code"] # getting the zip_code from the input
-    data['province'] = set_province(zip_code) # turning that into a province, putting it into the data
-    data.pop("zip_code", None) # removing the zipcode from the data
+    # Convert Pydantic model to dict if needed
+    if not isinstance(data, dict):
+        data = data.dict()
+    
+    zip_code = data["zip_code"]
+    data['province'] = set_province(zip_code)
+    data.pop("zip_code", None)
     data = set_property_type(data)
+    data.pop("property_type", None)
 
-    data_array = pd.DataFrame([data]) # converting the dict to a array for the model
-    print(data)
-    # print(data_array)
+    data_array = pd.DataFrame([data])
+    return data_array
 
 
 def set_property_type(data):
@@ -100,7 +103,7 @@ def set_province(zip_code):
     return None
 
 
-preprocess(input_test)
+# preprocess(input_test)
 
 
 ## For filling:
