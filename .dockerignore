@@ -1,0 +1,42 @@
+
+# 1. Use a lightweight Python base image
+# FROM python:3.9-slim
+
+# 2. Set the working directory inside the container
+# WORKDIR /app
+
+# 3. Copy only requirements first to leverage Docker caching
+# COPY requirements.txt .
+
+# 4. Install dependencies
+# RUN pip install --no-cache-dir -r requirements.txt
+
+# 5. Copy the rest of your project (app/, models/, src/, etc.)
+# COPY . .
+
+# 6. Expose the default Streamlit port
+# EXPOSE 8501
+
+# 7. Start the dashboard
+# CMD ["streamlit", "run", "app/app.py", "--server.port=8501", "--server.address=0.
+
+
+
+# Use Python 3.10 as the base image
+FROM python:3.10-slim
+
+# Create the /app folder
+WORKDIR /app
+
+# Copy requirements first to leverage Docker cache
+COPY requirements.txt .
+
+# Install FastAPI, Uvicorn, and all other dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy all project files into the /app folder
+COPY . .
+
+# Run the app.py file with Python
+# Note: Ensure src/app.py uses the PORT environment variable for Render
+CMD ["python", "src/app.py"]

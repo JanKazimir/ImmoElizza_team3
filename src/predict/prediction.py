@@ -5,7 +5,7 @@ import joblib
 def load_inference_tools():
     # Load the model and the required column structure.
     model = joblib.load('model/model.pkl')
-    model_columns = joblib.load('models/model_columns.pkl')
+    model_columns = joblib.load('model/model_columns.pkl')
     return model, model_columns
 
 def make_prediction(input_data):
