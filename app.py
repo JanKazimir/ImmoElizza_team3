@@ -10,25 +10,22 @@ app = FastAPI()
 
 # Define the data format for the POST request
 class HouseData(BaseModel):
-    living_area: int
-    rooms_number: int
     zip_code: int
-    land_area: Optional[int] = None
-    garden: bool = False
-    garden_area: Optional[int] = None
-    equipped_kitchen: bool = False
-    swimming_pool: bool = False
-    furnished: bool = False
-    open_fire: bool = False
-    terrace: bool = False
-    terrace_area: Optional[int] = None
-    facades_number: Optional[int] = None
-    building_state: Optional[str] = None # e.g., "New", "Good", "To renovate"
-
-
-
-
-
+    number_of_bedrooms: int
+    livable_surface_m2: int
+    furnished: bool = None
+    has_terrace: bool = None
+    has_garden: bool = None
+    land_area_m2 : int = None 
+    number_of_facades: Optional[int] = None
+    has_swimming_pool: bool = None
+    build_year: int = None 
+    has_garage: bool = None
+    number_of_garages: Optional[int] = None
+    has_elevator: bool = None
+    energy_KWh_m2_year: Optional[int] = None
+    building_state: Optional[int] = None
+    property_type: Optional[str] # e.g., "New", "Good", "To renovate"
 
 
 
@@ -59,6 +56,10 @@ def predict_price(data: HouseData):
     
     # Return the price (we take the first result from the list)
     return {"prediction": float(prediction)}
+
+
+
+
 """
 @app.post("/predict")
 def predict_price(data: HouseData):

@@ -166,3 +166,6 @@ print(
 ## Exporting the model:
 XGB_model_path = Path(__file__).resolve().parents[2] / "data" / "models" / "XGB_model.pkl"
 joblib.dump(xgb_pipe, XGB_model_path)
+
+list_cols = X.columns.to_list
+print(list_cols)
