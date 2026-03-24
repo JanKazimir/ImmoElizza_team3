@@ -6,36 +6,91 @@ import csv
 from pathlib import Path
 
 
-# Incoming data from api:
-{
-  "data": {
-    "area": int,
-    "property-type": "APARTMENT" | "HOUSE" | "OTHERS",
-    "rooms-number": int,
-    "zip-code": int,
-    "land-area": Optional[int],
-    "garden": Optional[bool],
-    "garden-area": Optional[int],
-    "equipped-kitchen": Optional[bool],
-    "full-address": Optional[str],
-    "swimming-pool": Optional[bool],
-    "furnished": Optional[bool],
-    "open-fire": Optional[bool],
-    "terrace": Optional[bool],
-    "terrace-area": Optional[int],
-    "facades-number": Optional[int],
-    "building-state": Optional[
-      "NEW" | "GOOD" | "TO RENOVATE" | "JUST RENOVATED" | "TO REBUILD"
-    ]
-  }
+input_test = {
+    "livable_surface_m2": 100,
+    "number_of_bedrooms": 2,
+    "zip_code": 1000, # The model can see it and still run.
+    "land_area_m2": None,
+    "build_year": 1978,
+    "energy_KWh_m2_year": 256.0,
+    "has_garden": None,
+    "has_terrace": None,
+    "has_garage": None,
+    "number_of_garages": None,
+    "has_elevator": None,
+    "has_swimming_pool": None,
+    "furnished": None,
+    "number_of_facades": None,
+    'prop_group_penthouse': False,
+    'prop_group_other': False ,
+    'prop_group_house' : False,
+    'building_state' : False ,
+    'prop_group_villa': False ,
+    'prop_group_flat': True,
+    'prop_group_mixed_building' : False, 
+    'province': 1
 }
 
+## Need to 
+# - fill in some nulls?
+# - check data types?
+# - ensure property types is correct
 
+
+
+
+
+
+def preprocess(data):
+    # print(data)
+    zip_code = data["zip_code"] # getting the zip_code from the input
+    data['province'] = set_province(zip_code) # turning that into a province, putting it into the data
+    
+    data_array = pd.DataFrame([data])
+    print(data)
+  
+  
+  
+  
+    
+def set_province(zip_code):
+    province_ranges = [
+        (1000, 1299, 1), # 1 bxl_cap
+        (1300, 1499, 2), # 2 brabant_wallon
+        (1500, 1999, 3), # 3 brabant_flamand
+        (2000, 2999, 4), # 4 anvers
+        (3000, 3499, 3), # 3 brabant_flamand
+        (3500, 3999, 5), # 5 limbourg
+        (4000, 4999, 6), # 6 liège
+        (5000, 5680, 7), # 7 namur
+        (6000, 6599, 8), # 8 hainaut
+        (6600, 6999, 9), # 9 luxembourg
+        (8000, 8999, 10), # 10 flandre_occidentale
+        (9000, 9999, 11), # 11 flandre_orientale
+    ]
+    for start, end, province in province_ranges:
+        if start <= zip_code <= end:
+            return province
+    return None
+
+
+  
+preprocess(input_test)
+
+
+
+## For filling:
+# build_year : 1978
+# "energy_KWh_m2_year": 256.0,
+# "has_garden": true or leave empty
+
+
+# "building_state": Optional{'1' :'To demolish', "2" : 'To renovate', "3" : 'To restore', '4' : 'Normal', '5' : 'Excellent', '6' : 'Fully renovated' , '7' : 'New'},
 
 ## Output
 {
-  "prediction": Optional[float],
-  "status_code": Optional[int]
+    # "prediction": Optional[float],
+    # "status_code": Optional[int]
 }
 
 
@@ -72,36 +127,27 @@ binary_features = [
 ]
 
 
-## Notes:
-# ❗ Model doesn't have the zipcode, so we'll need to reuse teh province encode function
-# ❓ Nonsense to remove: open fire, terrace area was dropped
+""" 
 
-# correspondance between api input and model names:
+# Our Data from api:
 {
-    "area": "livable_surface_m2",
-    "property-type":     "prop_group_flat" | "prop_group_house" | "prop_group_other",
-    "rooms-number": "number_of_bedrooms",
-    "zip-code": "province" # ❗ needs encoding
-    "land-area": "land_area_m2",
-    "garden": "has_garden",
-    "garden-area": Optional[int], ## We don't have that.
-    "equipped-kitchen": Optional[bool],
-    "full-address": Optional[str],
-    "swimming-pool": Optional[bool],
+  "data": {
+    "livable_surface_m2": int,
+    "property-type":  "prop_group_flat" | "prop_group_house" | "prop_group_other",
+    "number_of_bedrooms": int,
+    "zip-code": int, # Province encoding ❗
+    "land_area_m2": Optional[int],
+    "build_year": Optional[int],
+    "energy_KWh_m2_year": Optional[int],
+    "has_garden": Optional[bool],
+    "has_terrace": Optional[bool],
+    "has_garage": Optional[bool],
+    "number_of_garages" : Optional[int],
+    "has_elevator": Optional[bool],
+    "has_swimming_pool": Optional[bool],
     "furnished": Optional[bool],
-    "open-fire": Optional[bool],
-    "terrace": Optional[bool],
-    "terrace-area": Optional[int],
-    "facades-number": Optional[int],
-    "building-state": Optional[
-      "NEW" | "GOOD" | "TO RENOVATE" | "JUST RENOVATED" | "TO REBUILD"
-    ]
+    "number_of_facades": Optional[int],
+    "building_state": Optional{'1' :'To demolish', "2" : 'To renovate', "3" : 'To restore', '4' : 'Normal', '5' : 'Excellent', '6' : 'Fully renovated' , '7' : 'New'}
   }
-
-
-###
-### The actual function:
-###
-
-def preprocess():
-    pass
+}
+ """
