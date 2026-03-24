@@ -7,8 +7,8 @@ import os
 # This part automatically finds the correct folder path
 # regardless of where you run the terminal from.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODEL_PATH = os.path.join(BASE_DIR, 'models', 'best_model.pkl')
-COLUMNS_PATH = os.path.join(BASE_DIR, 'models', 'model_columns.pkl')
+MODEL_PATH = os.path.join(BASE_DIR, 'model', 'model.pkl')
+COLUMNS_PATH = os.path.join(BASE_DIR, 'model', 'model_columns.pkl')
 
 # Now load using the full path
 model = joblib.load(MODEL_PATH)

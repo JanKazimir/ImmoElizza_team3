@@ -38,7 +38,7 @@ def predict_info():
         "property details such as 'living_area', 'rooms_number', and 'zip_code'."
     )
 # 1.Load your trained model (ensure the path is correct)
-model = joblib.load("models/best_model.pkl")
+model = joblib.load("model/model.pkl")
 
 # 2. Update de POST route
 @app.post("/predict")
