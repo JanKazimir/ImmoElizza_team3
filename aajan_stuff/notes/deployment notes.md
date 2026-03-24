@@ -20,9 +20,10 @@ what needs to be there, what can be nan.
 - cleaning_data.py
   - has a preprocess() function, takes the input returns the preprocessed data, or an error to the user.
 
-We need to decide : 
+**We need to decide:**
 - what model do we use  -> What features do we keep and drop.
-
+- use pydantic and a data class. like i did in the exercise. 
+  - let's use use a data type for each feature.
 
 
 
