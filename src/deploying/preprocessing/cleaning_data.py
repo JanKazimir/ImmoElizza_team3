@@ -69,6 +69,11 @@ def set_property_type(data):
     
     elif prop_type == "other":
       data['prop_group_other'] = True #true
+    
+    else :
+      data['prop_group_other'] = None #true
+
+      
 
     print(f"+++++++++++++ {data}")
     return data
