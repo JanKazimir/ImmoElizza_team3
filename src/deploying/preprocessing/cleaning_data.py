@@ -21,38 +21,59 @@ input_test = {
     "has_swimming_pool": None,
     "furnished": None,
     "number_of_facades": None,
-    'prop_group_penthouse': False,
+    'building_state' : None,
+    'property_type': 'house',
+    'prop_group_penthouse': 'potato',
     'prop_group_other': False ,
-    'prop_group_house' : False,
-    'building_state' : False ,
-    'prop_group_villa': False ,
+    'prop_group_house' : 'test',
+    'prop_group_villa': True ,
     'prop_group_flat': True,
     'prop_group_mixed_building' : False, 
     'province': 1
 }
 
-## Need to 
-# - fill in some nulls?
-# - check data types?
+## Need to
+# - fill in some nulls? not necessary for the xgboost
+# - check data types? pydantic should do that
 # - ensure property types is correct
-
-
-
-
 
 
 def preprocess(data):
     # print(data)
     zip_code = data["zip_code"] # getting the zip_code from the input
     data['province'] = set_province(zip_code) # turning that into a province, putting it into the data
-    
-    data_array = pd.DataFrame([data])
+    data.pop("zip_code", None) # removing the zipcode from the data
+    data = set_property_type(data)
+
+    data_array = pd.DataFrame([data]) # converting the dict to a array for the model
     print(data)
-  
-  
-  
-  
+    # print(data_array)
+
+
+def set_property_type(data):
+    prop_type = data['property_type'].lower()
     
+    ## Set everything to false:
+    data['prop_group_penthouse'] = False
+    data['prop_group_other'] = False
+    data['prop_group_house'] = False
+    data['prop_group_villa'] = False
+    data['prop_group_flat'] = False
+    data['prop_group_mixed_building'] = False
+    
+    if prop_type == 'house':
+      data['prop_group_house'] = True # true
+
+    elif prop_type == "flat":
+      data['prop_group_flat'] = True # true
+    
+    elif prop_type == "other":
+      data['prop_group_other'] = True #true
+
+    print(f"+++++++++++++ {data}")
+    return data
+
+
 def set_province(zip_code):
     province_ranges = [
         (1000, 1299, 1), # 1 bxl_cap
@@ -74,9 +95,7 @@ def set_province(zip_code):
     return None
 
 
-  
 preprocess(input_test)
-
 
 
 ## For filling:
