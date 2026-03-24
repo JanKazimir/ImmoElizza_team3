@@ -6,6 +6,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Optional
 
+
 app = FastAPI()
 
 # Define the data format for the POST request
@@ -37,21 +38,29 @@ def predict_info():
         "To get a price prediction, send a POST request with a JSON object containing "
         "property details such as 'living_area', 'rooms_number', and 'zip_code'."
     )
-# 1.Load your trained model (ensure the path is correct)
+
 model = joblib.load("model/model.pkl")
+model_columns = joblib.load("model/model_columns.pkl")
+
 
 # 2. Update de POST route
 @app.post("/predict")
 def predict_price(data: HouseData):
-    # Convert the JSON data to a Pandas DataFrame (as your model expects)
-    input_df = pd.DataFrame([data.dict()])
-    
-    # Run the prediction
-    prediction = model.predict(input_df)
-    
-    # Return the price (we take the first result from the list)
-    return {"prediction": float(prediction)}
-"""
+    try:
+        # Convert input to DataFrame
+        input_df = pd.DataFrame([data.dict()])
+        
+        # Ensure column order matches training (CRITICAL for XGBoost)
+        input_df = input_df.reindex(columns=model_columns, fill_value=0)
+        
+        # Predict
+        prediction = model.predict(input_df)
+        return {"prediction": round(float(prediction[0]), 2)}
+
+    except Exception as e:
+        # This will return the actual error message in the API response
+        return {"error": str(e), "type": str(type(e))}
+""""
 @app.post("/predict")
 def predict_price(data: HouseData):
     
@@ -62,8 +71,7 @@ def predict_price(data: HouseData):
     # prediction = model.predict([list(data.dict().values())])
     prediction = 250000 
     return {"prediction": prediction}
-    """
-
+"""
 if __name__ == "__main__":
     # Render uses the PORT environment variable
     port = int(os.environ.get("PORT", 8000))
