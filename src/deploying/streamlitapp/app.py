@@ -1,18 +1,25 @@
+#%%
+
 import streamlit as st
 import pandas as pd
 import joblib
 import numpy as np
 import os
+from pathlib import Path
+
 
 # This part automatically finds the correct folder path
 # regardless of where you run the terminal from.
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODEL_PATH = os.path.join(BASE_DIR, 'model', 'model.pkl')
-COLUMNS_PATH = os.path.join(BASE_DIR, 'model', 'model_columns.pkl')
-
+BASE_DIR = Path(__file__).resolve()
+PROJECT_ROOT = BASE_DIR.parents[3]
+MODEL_PATH = PROJECT_ROOT / 'model' / 'XGB_model.pkl'
+COLUMNS_PATH = PROJECT_ROOT / 'model' / 'model_columns.pkl'
+#%%
 # Now load using the full path
 model = joblib.load(MODEL_PATH)
 model_columns = joblib.load(COLUMNS_PATH)
+print(model_columns)
+#%%
 
 # 1. Load the model and the columns list
 #model = joblib.load('models/best_model.pkl')
@@ -29,12 +36,12 @@ with st.form("prediction_form"):
     
     with col1:
         zip_code = st.number_input("Zip Code", min_value=1000, max_value=9999, value=1000)
-        living_area = st.number_input("Living Area (m²)", min_value=10, max_value=1000, value=150)
+        living_area = st.number_input("Living Area (m²)", min_value=10, max_value=1000, value=100)
         rooms = st.slider("Number of Bedrooms", 1, 10, 3)
         facades = st.slider("Number of Facades", 1, 4, 2)
         
     with col2:
-        land_area = st.number_input("Land Area (m²)", min_value=0, max_value=10000, value=500)
+        land_area = st.number_input("Land Area (m²)", min_value=0, max_value=10000, value=0)
         build_year = st.number_input("Build Year", min_value=1800, max_value=2024, value=2000)
         has_garden = st.checkbox("Garden")
         has_terrace = st.checkbox("Terrace")
@@ -76,4 +83,4 @@ if submit:
     prediction = model.predict(input_data)[0]
     
     st.success(f"### 💰 Estimated Value: €{prediction:,.2f}")
-    st.info("This prediction is based on XGBoost analysis of 10,100 listings.")
+    st.info("This prediction is based on XGBoost analysis of ~25k listings.")
