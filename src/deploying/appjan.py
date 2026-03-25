@@ -14,19 +14,19 @@ class HouseData(BaseModel):
     zip_code: int
     number_of_bedrooms: int
     livable_surface_m2: int
-    furnished: Optional[bool] = Field(default=None, examples=[None])
-    has_terrace: Optional[bool] = Field(default=None, examples=[None])
-    has_garden: Optional[bool] = Field(default=None, examples=[None])
-    land_area_m2: Optional[int] = Field(default=None, examples=[None])
+    furnished: Optional[bool] = Field(default=False, examples=[0])
+    has_terrace: Optional[bool] = Field(default=False, examples=[None])
+    has_garden: Optional[bool] = Field(default=False, examples=[None])
+    land_area_m2: Optional[int] = Field(default=False, examples=[None])
     number_of_facades: Optional[int] = Field(default=None, examples=[None])
-    has_swimming_pool: Optional[bool] = Field(default=None, examples=[None])
+    has_swimming_pool: Optional[bool] = Field(default=False, examples=[0])
     build_year: Optional[int] = Field(default=None, examples=[None])
-    has_garage: Optional[bool] = Field(default=None, examples=[None])
+    has_garage: Optional[bool] = Field(default=False, examples=[None])
     number_of_garages: Optional[int] = Field(default=None, examples=[None])
     has_elevator: Optional[bool] = Field(default=None, examples=[None])
     energy_KWh_m2_year: Optional[int] = Field(default=None, examples=[None])
-    building_state: Optional[int] = Field(default=None, examples=[None])
-    property_type: str = Field(default="house", examples=["house"])  # "house", "flat", or "other"
+    building_state: Optional[int] = Field(default=None, examples=[4]) # '1: To demolish', '2:To renovate', '3: To restore', '4: Normal', '5: Excellent', '6: Fully renovated' , '7: New']
+    property_type: str = Field(default="house", examples=["house"])  # , "flat", "other"
 
 
 
