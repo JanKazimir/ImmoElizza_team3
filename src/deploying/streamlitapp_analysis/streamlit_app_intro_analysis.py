@@ -1,20 +1,25 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
-import json
-import csv
-
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+from pathlib import Path
+import json
+import csv
 import io
 
-# to run it: this needs to be updated
-## streamlit run strmlit/teststream.py
+# to run it:
+# uv run streamlit run src/deploying/streamlitapp_analysis/streamlit_app_intro_analysis.py
+# %%
 
+HERE = Path(__file__).resolve()
+PROJECT_ROOT = HERE.parents[3]
+DATA_FILE = PROJECT_ROOT / "data" / "clean_data_for_analysis.csv"
+print(DATA_FILE)
 
-data_file = "strmlit/clean_data_for_analysis.csv"
-df = pd.read_csv(data_file)
+# %%
+df = pd.read_csv(DATA_FILE)
 
 ## Title
 st.markdown("# Welcome to Immo Eliza!")
