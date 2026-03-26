@@ -1,4 +1,3 @@
-# %%
 
 import streamlit as st
 import pandas as pd
@@ -23,12 +22,10 @@ PROJECT_ROOT = BASE_DIR.parents[3]
 MODEL_PATH = PROJECT_ROOT / 'model' / 'XGB_model.pkl'
 COLUMNS_PATH = PROJECT_ROOT / 'model' / 'model_columns.pkl'
 
-# %%
 # Now load using the full path
 model = joblib.load(MODEL_PATH)
 model_columns = joblib.load(COLUMNS_PATH)
 print(model_columns)
-# %%
 
 # 1. Load the model and the columns list
 # model = joblib.load('models/best_model.pkl')
@@ -131,7 +128,7 @@ if submit:
     st.info("This prediction is based on XGBoost analysis of ~25k listings.")
 
 
-# %%
-# if __name__ == "__main__":
+if __name__ == "__main__":
+    
 
 

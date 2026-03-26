@@ -1,0 +1,148 @@
+import numpy as np
+import pandas as pd
+import streamlit as st
+import json
+import csv
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+import io
+
+# to run it: this needs to be updated
+## streamlit run strmlit/teststream.py
+
+
+data_file = "strmlit/clean_data_for_analysis.csv"
+df = pd.read_csv(data_file)
+
+## Title
+st.markdown("# Welcome to Immo Eliza!")
+st.markdown("We ***pretend*** to do real estate analysis, for an AI/ML bootcamp with Becode. What follows is based on real data scrapped from Immovlan.be in february 2026")
+
+st.markdown("This is what we're working with:")
+st.markdown("24k+ rows, 23 columns of data")
+
+df_head = df.head(5)
+df_head
+
+st.markdown("## Introduction and discovery: ")
+
+## Printing the df.info : it's quite ugly actually
+#st.markdown("Let's get our bearings: \n ")
+buffer = io.StringIO()          # create the fake file
+df.info(buf=buffer)             # tell info() to write there instead of stdout
+info_text = buffer.getvalue()   # pull the text out as a regular string
+#st.text(info_text)
+
+## Intro df
+st.markdown("#### Looking at nulls values and data types:")
+df_intro = pd.DataFrame({"Missing values count": df.isnull().sum(), "Data Type": df.dtypes})
+st.dataframe(df_intro)
+
+
+## Property types
+st.markdown("#### Property types:")
+
+# looking at property types:
+test = df.groupby('property_type')['property_subtype'].value_counts().unstack()
+test = test[test.sum().sort_values(ascending=False).index]
+fig, ax = plt.subplots(figsize=(10, 6))
+test.plot(kind='bar', stacked=True, ax=ax)
+ax.set_xlabel("Property type")
+ax.set_ylabel("Count")
+ax.set_title("Property Subtypes by Property Type", fontsize=16, fontweight='bold')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+#st.pyplot(fig)
+
+### Proportion of properties:
+df['property_type'].value_counts()
+subtypes = df['property_subtype'].value_counts()
+types = df['property_type'].value_counts()
+test = df.groupby('property_type')['property_subtype'].value_counts().unstack()
+test = test[test.sum().sort_values(ascending=False).index]
+
+fig, axes = plt.subplots(1,2, figsize=(14, 6), sharey=True)
+
+axes[0].bar(types.index, types.values,
+    alpha=0.7)
+
+
+axes[0].set_title('Property Types', fontsize=16, fontweight='bold')
+axes[0].set_xlabel('Types', fontsize=12)
+axes[0].set_ylabel('Number of Properties', fontsize=12)
+axes[0].grid(True, alpha=0.3)
+
+test.plot(kind='bar', stacked=True, ax=axes[1], colormap='rainbow')
+axes[1].set_title('Property Sub-Types', fontsize=16, fontweight='bold')
+axes[1].set_xlabel('Sub-Types', fontsize=12)
+axes[1].set_ylabel('Number of Properties', fontsize=12)
+axes[1].grid(True, alpha=0.3)
+axes[1].tick_params(axis='x', rotation=0)
+plt.tight_layout()
+plt.show()
+st.pyplot(fig)
+
+st.markdown("#### Data Health:")
+st.markdown("This graphs the percentage of values present (not null) for each column. (higher is better)")
+
+
+
+
+## Visualizing health_data
+data_health = (100-(df.isna().mean()*100)).round().sort_values(ascending=False)
+
+## Working on colors:
+cmap = plt.get_cmap('RdYlBu') # get the colormap into a variable.
+norm = plt.Normalize(vmin=0, vmax=100) # normalise the values for the colormap
+colors = cmap(norm(data_health.values)) # sets colors as the color map, on the normalise values, on the values
+
+## Setting the stage of the graph.
+fig, ax = plt.subplots(figsize=(14,7),)
+labels = [label[:15]+"..." if len(label) > 15 else label for label in data_health.index]
+labels_num = list(range(len(data_health.index)))
+legends = []
+for i in range(len(labels)):
+    legends.append(f"{i}: {labels[i]}")
+
+### Building the graph
+bars = ax.bar(data_health.index, data_health.values, color=colors ) #color='coolwarm' # color="plasma"
+ax.set_title("Data Health", fontsize=16, fontweight='bold')
+ax.set_ylabel("% Healthy")
+ax.grid(True, alpha=0.3, axis="y")
+ax.set_xticks(range(len(data_health.index)))
+ax.set_xticklabels(labels_num)
+ax.legend(bars, legends, loc="upper right", bbox_to_anchor=(1.125, 1), fontsize=8, frameon=True)
+
+plt.xticks()
+plt.tight_layout()
+plt.show()
+st.pyplot(fig)
+
+
+
+
+### Distribution of prices : look how high and low it goes
+st.markdown("#### Price distribution by locality.")
+st.markdown("***This is the most important graph here.*** \n")
+st.markdown("The national median price per m2 of real estate is 2463.86€/m2 (represented by the grey line)**")
+st.markdown(" This shows the median price per m2, for each zipcode, ranked from highest to lowest. \n  On the left, are the most expensive localities, on the right, the most affrodable. ")
+st.markdown("The *shape* of the curve is what matters: median price per square meter goes from north of 8000€/m^2 to less than 1000€/m^2. Also notice how the vast bulk of localities are between 4000 and 1000€/m2. \n ")
+st.markdown("So. Real estate prices can go from stupidly high to unbelieably low. Even for the bulk of houses, the price ranges from 1000 - 4000, a 4X increase! ")
+
+# all_prices_by_zip is your sorted Series (descending)
+fig, ax = plt.subplots(figsize=(12, 5))
+all_prices_by_zip = df.groupby(['zip_code', 'locality'])['price_by_m2'].median().sort_values(ascending=False).round(2)
+s = all_prices_by_zip.sort_values(ascending=False).reset_index(name='price_by_m2')
+s['rank'] = range(1, len(s) + 1)
+
+ax.plot(s['rank'], s['price_by_m2'], linewidth=2)
+ax.set_title('Median Price/m² by Zip/Locality (ranked)', fontsize=16, fontweight='bold')
+ax.set_xlabel('Localities sorted by price (1 = most expensive)')
+ax.set_ylabel('Median price_by_m2')
+ax.grid(alpha=0.3)
+ax.axhline(y=2463, color="gray", linestyle=":", linewidth=2)
+plt.tight_layout()
+plt.show()
+st.pyplot(fig)
